@@ -12,6 +12,7 @@ compile '*' do
     filter :erb
     filter :kramdown, :auto_ids => false
     layout 'default'
+    filter :externalize_links
     filter :html5small if compress
   end
 end
