@@ -124,7 +124,7 @@ footer {
   }
 
   .slogan {
-    line-height: 1;
+    line-height: 1.4;
     color: @accent;
     font-size: 2.6em;
     font-weight: bold;
@@ -132,9 +132,13 @@ footer {
 
     img {
       display: block;
-      margin: 0 auto -1ex;
+      margin: 0 auto -1.4ex;
       width: 680px;
     }
+  }
+
+  em {
+    white-space: nowrap;
   }
 }
 
@@ -147,6 +151,15 @@ footer {
     }
     &:after {
       display: none;
+    }
+  }
+
+  #billboard {
+    .slogan {
+      font-size: 2em;
+      img {
+        width: 100%;
+      }
     }
   }
 }
@@ -171,13 +184,4 @@ footer {
       }
     }
   }
-
-  #billboard {
-  .slogan {
-    font-size: 2em;
-    img {
-      width: 100%;
-    }
-  }
-}
 }
