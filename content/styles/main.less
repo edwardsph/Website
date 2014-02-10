@@ -6,11 +6,55 @@ body {
   margin: 0 auto;
   padding: 20px;
   max-width: 800px - 2*20px;
-  font: 11pt/1.5 'Open Sans', Verdana, Arial, sans-serif;
+  font: 11pt/1.6 'Open Sans', Verdana, Arial, sans-serif;
 }
 
 a {
   color: @accent;
+  &:hover {
+    color: lighten(@accent, 20%);
+  }
+}
+
+p {
+  + p {
+    margin-top: 1em;
+  }
+}
+
+h1 {
+  font-size: 2.5em;
+  color: @accent;
+  margin-bottom: .4em;
+}
+
+h1:before {
+  content: "Linked Data Fragments";
+  font-weight: 300;
+  letter-spacing: -2px;
+  color: fade(black, 30%);
+  border-right: 1px solid;
+  padding-right: 14px;
+  margin: 0 10px 0 -2px;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: .7em 0 .3em;
+}
+
+main ul {
+  list-style: none;
+
+  li {
+    padding-left: 25px;
+    &:before {
+      content: "■ ";
+      color: @accent;
+      position: absolute;
+      margin: -2px -17px;
+    }
+  }
 }
 
 nav {
@@ -30,7 +74,7 @@ nav {
     padding: 5px 15px 5px 10px;
     background-color: @accent;
     a {
-      color: white;
+      color: white !important;
     }
   }
   ul {
