@@ -4,9 +4,61 @@
 
 body {
   margin: 0 auto;
-  max-width: 800px;
-  padding: 40px 20px;
+  padding: 20px;
+  max-width: 800px - 2*20px;
   font: 11pt/1.5 'Open Sans', Verdana, Arial, sans-serif;
+}
+
+a {
+  color: @accent;
+}
+
+nav {
+  background-color: fade(black, 4%);
+  border-radius: 10px;
+  margin: 10px 0 30px;
+
+  * {
+    display: inline-block;
+  }
+  a {
+    text-decoration: none;
+  }
+  p {
+    font-weight: bold;
+    border-radius: 10px 3px 3px 10px;
+    padding: 5px 15px 5px 10px;
+    background-color: @accent;
+    a {
+      color: white;
+    }
+  }
+  ul {
+    padding-left: 20px;
+    li {
+      padding: 5px 22px;
+      border-radius: 5px;
+      &.active {
+        font-weight: bold;
+      }
+      &:hover {
+        background-color: @accent;
+        a {
+          color: white;
+        }
+        transition: all 0.2s;
+      }
+    }
+  }
+
+  &:after {
+    content: " ";
+    padding: 5px 5px 5px 0;
+    background-color: @accent;
+    border-right: 2px solid @accent;
+    border-radius: 3px 10px 10px 3px;
+    float: right;
+  }
 }
 
 #billboard {

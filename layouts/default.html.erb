@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title><%= @item[:title] ? "Linked Data Fragments | #{@item[:title]}"
+                           : "Linked Data Fragments" %></title>
+  <link rel="stylesheet" href="/styles/main.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet'>
+</head>
+<body>
+  <nav>
+    <p><a href="/">Linked Data Fragments</a></p>
+    <ul>
+      <% @items.find_all{|c| c[:extension] =~ /^md/}.
+                sort{|a,b| a[:filename] <=> b[:filename]}.
+                sort{|a,b| (a[:order] || 10) <=> (b[:order] || 10)}.
+                each do |page| %>
+        <li<%= @item == page ? ' class="active"' : '' %>><%= link_to(page[:title] || 'Home', page.reps[0]) %></li>
+      <% end %>
+    </ul>
+  </nav>
+  <main>
+    <%= yield %>
+  </main>
+</body>
+</html>

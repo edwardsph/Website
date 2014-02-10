@@ -1,5 +1,5 @@
 ---
-title:
+order: 0
 ---
 
 <div id="billboard" markdown="1">
