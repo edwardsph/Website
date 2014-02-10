@@ -6,6 +6,6 @@ order: 0
 # Linked Data Fragments
 
 [![Linked Data Fragments](/images/logo.svg){:.logo}](/concept/)
-allow _clients_ to query datasets.
+allow _clients_ to query datasets.
 {:.slogan}
 </div>
