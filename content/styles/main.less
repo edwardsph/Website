@@ -1,1 +1,30 @@
 @import "reset";
+
+@accent: rgb(190,22,34);
+
+body {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 40px 20px;
+  font: 11pt/1.5 'Open Sans', Verdana, Arial, sans-serif;
+}
+
+#billboard {
+  h1 {
+    display: none;
+  }
+
+  .slogan {
+    color: @accent;
+    font-size: 2.6em;
+    font-weight: bold;
+    text-align: center;
+
+    img {
+      display: block;
+      margin: 0 auto -30px;
+      width: 680px;
+    }
+  }
+
+}
