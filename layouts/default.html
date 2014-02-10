@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title><%= @item[:title] ? "Linked Data Fragments | #{@item[:title]}"
+                           : "Linked Data Fragments" %></title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  <main>
+    <%= yield %>
+  </main>
+</body>
+</html>
