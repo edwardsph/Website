@@ -6,24 +6,29 @@ order: 5
 # Concept
 
 ## Datasets are available as Linked Data Fragments
+On today's Web, Linked Data is usually published in fragments of one of these 3 types:
 
-On the current Web of Data, clients can query data through three kinds of _Linked Data Fragments_:
-
-- A **data dump** offers one large fragment that contains the entire dataset
+- A **data dump** is one large fragment that contains the entire dataset
   _([example](http://downloads.dbpedia.org/3.9/en/))_.
-- A **subject page** offers fragments that provide information about specific subjects
+- A **subject page** is a fragment about a specific subject in the dataset
   _([example](http://dbpedia.org/page/Linked_data))_.
-- A **SPARQL endpoint** offers fragments that correspond to SPARQL query responses
+- A **SPARQL result** is a fragment that corresponds to a SPARQL query
   _([example](http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=CONSTRUCT+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D%0D%0AWHERE+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D&format=text%2Fturtle))_.
 
-All of those fragments have their own [benefits and drawbacks](/motivation/)
-that we have to accept.
+We call each such part a **Linked Data Fragment** of the dataset.
 <br>
-Could we somehow balance the trade-offs—_limiting server effort_
-while _maximizing client potential_?
+All fragments come with their own [benefits and drawbacks](/motivation/)
+that we have to accept.
+For instance, SPARQL endpoints need a significant amount of server resources
+to generate SPARQL results.
+
+While these 3 options are the most common ways to offer datasets,
+we could think of many others.
+Our goal is to _balance fragment trade-offs_,
+limiting _server_ effort while maximizing _client_ potential.
 
 ## New kinds of fragments enable more intelligent client behavior
-We now order these kinds of Linked Data Fragments
+Let's order these types of Linked Data Fragments
 by **increasing demand for server resources**.
 **SPARQL endpoints** use most server resources
 and thus have a [low availability](http://sw.deri.org/~aidanh/docs/epmonitorISWC.pdf).
@@ -31,9 +36,9 @@ If you don't want to depend on such an endpoint,
 you download a **data dump**,
 but then the client must do all the work.
 With **subject pages**, servers do minimal effort,
-but clients need to [work hard](http://squin.sourceforge.net/) to solve queries.
+but clients need to [work hard](http://squin.sourceforge.net/) to solve simple queries.
 
-<svg height="110">
+<svg height="115">
   <marker id="rightArrow" markerWidth="10" markerHeight="10" refx="10" refy="5">
     <polyline points="0,0 10,5 0,10"  fill="none" stroke="black" />
   </marker>
@@ -44,13 +49,13 @@ but clients need to [work hard](http://squin.sourceforge.net/) to solve queries.
   <line x1="0" y1="74" x2="100%" y2="74"
         style="marker-start: url(#leftArrow); marker-end: url(#rightArrow);"/>
 
-  <text x="0%" y="25" class="caption">maximal client usage</text>
-  <text x="0%" y="42" class="caption">maximal availability</text>
-  <text x="0%" y="59" class="caption">maximal caching</text>
+  <text x="0.5%" y="25" class="caption">fully local querying</text>
+  <text x="0.5%" y="42" class="caption">maximal data availability</text>
+  <text x="0.5%" y="59" class="caption">high processing by the client</text>
 
-  <text x="100%" y="25" class="caption right">minimal client usage</text>
-  <text x="100%" y="42" class="caption right">minimal availability</text>
-  <text x="100%" y="59" class="caption right">minimal caching</text>
+  <text x="99.5%" y="25" class="caption right">fully remote querying</text>
+  <text x="99.5%" y="42" class="caption right">minimal data availability</text>
+  <text x="99.5%" y="59" class="caption right">high processing by the server</text>
 
   <line x1="5%"  x2="5%"  y1="69" y2="80" />
   <line x1="20%" x2="20%" y1="69" y2="80" />
@@ -62,8 +67,8 @@ but clients need to [work hard](http://squin.sourceforge.net/) to solve queries.
   <text  x="85%"  y="95"  class="label">SPARQL endpoint</text>
 </svg>
 
-Notice the highly _underexplored area_ in the middle:
-those solutions demand some server processing,
+Note the highly _underexplored area_ in the middle:
+those solutions demand _some_ server processing,
 but guarantee higher availablity
 because the client puts in effort as well.
 <br>
