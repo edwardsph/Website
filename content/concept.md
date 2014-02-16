@@ -75,3 +75,19 @@ because the client puts in effort as well.
 Fragmentations that _minimize server resource usage_
 but enable clients to _query data sources efficiently_
 allow for a **new generation of Linked Data consumers**.
+
+## Basic Linked Data Fragments allow client-side querying
+We propose that servers offer _basic Linked Data Fragments_,
+which have the following characteristics.
+Each basic Linked Data Fragment offers:
+
+- **data** that corresponds to a _basic triple pattern_
+  _([example](http://data.linkeddatafragments.org/dbpedia?subject=&predicate=rdf%3Atype&object=dbpedia-owl%3ARestaurant))_.
+- **metadata** that consists of the (approximate) total triple count
+  _([example](http://data.linkeddatafragments.org/dbpedia?subject=&predicate=rdf%3Atype&object=))_.
+- **controls** that lead to all other fragments of the same dataset
+  _([example](http://data.linkeddatafragments.org/dbpedia?subject=&predicate=&object=%22John%22%40en))_.
+
+Basic Linked Data Fragments require only little effort to generate on the server side,
+<br>
+and they allow _clients_ to execute queries.
