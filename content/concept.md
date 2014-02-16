@@ -76,7 +76,7 @@ Fragmentations that _minimize server resource usage_
 but enable clients to _query data sources efficiently_
 allow for a **new generation of Linked Data consumers**.
 
-## Basic Linked Data Fragments allow client-side querying
+## Basic Linked Data Fragments allow client-side querying {#basic-ldf}
 We propose that servers offer _basic Linked Data Fragments_,
 which have the following characteristics.
 Each basic Linked Data Fragment offers:
