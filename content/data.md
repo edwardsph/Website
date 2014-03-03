@@ -1,6 +1,6 @@
 ---
 title: Data
-order: 2
+order: 4
 ---
 
 # Data
@@ -25,6 +25,7 @@ You can execute queries on these datasets with a [Linked Data Fragments client](
 ## Host your own Linked Data Fragments server
 You can easily deploy your own server
 on top of an existing SPARQL endpoint.
-[Download the server](/downloads/).
+[Download the server.](/downloads/)
+<br>
 Because this server only executes simple queries on your endpoint,
 there are no scalability issues.

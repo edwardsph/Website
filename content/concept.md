@@ -1,12 +1,12 @@
 ---
 title: Concept
-order: 5
+order: 3
 ---
 
 # Concept
 
-## Datasets are available as Linked Data Fragments
-On today's Web, Linked Data is usually published in fragments of one of these 3 types:
+## All datasets are available as Linked Data Fragments
+On today's Web, Linked Data is usually available as fragments of one of these 3 types:
 
 - A **data dump** is one large fragment that contains the entire dataset
   _([example](http://downloads.dbpedia.org/3.9/en/))_.
@@ -19,23 +19,24 @@ We call each such part a **Linked Data Fragment** of the dataset.
 <br>
 All fragments come with their own [benefits and drawbacks](/motivation/)
 that we have to accept.
-For instance, SPARQL endpoints need a significant amount of server resources
-to generate SPARQL results.
+For instance, SPARQL endpoints need a significant amount of server resources
+to generate SPARQL results.
 
 While these 3 options are the most common ways to offer datasets,
 we could think of many others.
+<br>
 Our goal is to _balance fragment trade-offs_,
 limiting _server_ effort while maximizing _client_ potential.
 
 ## New kinds of fragments enable more intelligent client behavior
-Let's order these types of Linked Data Fragments
+Let's first order these types of Linked Data Fragments
 by **increasing demand for server resources**.
-**SPARQL endpoints** use most server resources
+**SPARQL endpoints** use most server resources
 and thus have a [low availability](http://sw.deri.org/~aidanh/docs/epmonitorISWC.pdf).
-If you don't want to depend on such an endpoint,
-you download a **data dump**,
+If you don't want to depend on such an endpoint,
+you download a **data dump**,
 but then the client must do all the work.
-With **subject pages**, servers do minimal effort,
+With **subject pages**, servers do minimal effort,
 but clients need to [work hard](http://squin.sourceforge.net/) to solve simple queries.
 
 <svg height="115">
@@ -69,16 +70,15 @@ but clients need to [work hard](http://squin.sourceforge.net/) to solve simple q
 
 Note the highly _underexplored area_ in the middle:
 those solutions demand _some_ server processing,
-but guarantee higher availablity
+but guarantee higher availability
 because the client puts in effort as well.
 <br>
 Fragmentations that _minimize server resource usage_
 but enable clients to _query data sources efficiently_
 allow for a **new generation of Linked Data consumers**.
 
-## Basic Linked Data Fragments allow client-side querying {#basic-ldf}
-We propose that servers offer _basic Linked Data Fragments_,
-which have the following characteristics.
+## Basic Linked Data Fragments allow Web-scale, client-side querying {#basic-ldf}
+We propose that servers offer **basic Linked Data Fragments**.
 Each basic Linked Data Fragment offers:
 
 - **data** that corresponds to a _basic triple pattern_
@@ -88,6 +88,9 @@ Each basic Linked Data Fragment offers:
 - **controls** that lead to all other fragments of the same dataset
   _([example](http://data.linkeddatafragments.org/dbpedia?subject=&predicate=&object=%22John%22%40en))_.
 
-Basic Linked Data Fragments require only little effort to generate on the server side,
-<br>
+Basic Linked Data Fragments require little effort from the server,
 and they allow _clients_ to execute queries.
+
+We developed a [basic Linked Data Fragments client](/software/)
+that can solve basic graph pattern SPARQL queries,
+using only basic Linked Data Fragments at the server side.

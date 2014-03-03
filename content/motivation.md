@@ -1,6 +1,6 @@
 ---
 title: Motivation
-order: 5
+order: 2
 ---
 
 # Motivation
@@ -14,4 +14,4 @@ but their availability is [notoriously problematic](http://sw.deri.org/~aidanh/d
 
 By offering datasets as [basic Linked Data Fragments](/concept/),
 we can vastly improve the scalability of servers,
-while still allowing clients to query ther data efficiently.
+while still allowing clients to query the data efficiently.
