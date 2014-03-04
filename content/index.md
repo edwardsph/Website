@@ -42,11 +42,11 @@ Servers can offer data at low processing cost
 in a way that enables client-side querying.
 [**Here's how.**](/concept/)
 
-You can start offering such smart Linked Data Fragments right now.
+You can start publishing such smart Linked Data Fragments right now.
 [**Install the server.**](/software/)
 <br>
 Want to explore a server first?
-[**Try our datasets online.**](/data/)
+[**View our datasets online.**](/data/)
 <br>
-Want to see how a _client_ solves SPARQL queries?
+See how a _client_ solves SPARQL queries.
 [**Try the Linked Data Fragments client.**](/data/)
