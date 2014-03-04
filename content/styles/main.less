@@ -85,10 +85,12 @@ nav {
   ul {
     padding-left: 20px;
     li {
-      padding: 5px 18px;
+      padding: 5px 20px;
       border-radius: 5px;
+      letter-spacing: .1ex; // correct for bold active links
       &.active {
         font-weight: bold;
+        letter-spacing: 0px;
       }
       &:hover {
         background-color: @accent;
@@ -218,7 +220,9 @@ body.home {
   }
 
   body.home {
-    text-align: center;
+    main {
+      text-align: center;
+    }
 
     img.aside {
       float: none;
