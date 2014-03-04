@@ -8,14 +8,15 @@ order: 3
 ## All datasets are available as Linked Data Fragments
 On today's Web, Linked Data is usually available as fragments of one of these 3 types:
 
-- A **data dump** is one large fragment that contains the entire dataset
-  _([example](http://downloads.dbpedia.org/3.9/en/))_.
-- A **subject page** is a fragment about a specific subject in the dataset
-  _([example](http://dbpedia.org/page/Linked_data))_.
 - A **SPARQL result** is a fragment that corresponds to a SPARQL query
   _([example](http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=CONSTRUCT+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D%0D%0AWHERE+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D&format=text%2Fturtle))_.
+- A **subject page** is a fragment about a specific subject in the dataset
+  _([example](http://dbpedia.org/page/Linked_data))_.
+- A **data dump** is one large fragment that contains the entire dataset
+  _([example](http://downloads.dbpedia.org/3.9/en/))_.
 
-We call each such part a **Linked Data Fragment** (LDF) of the dataset.
+We call each such part a **Linked Data Fragment** (LDF) of the dataset
+_([definition](/in-depth/#ldf))_.
 
 Linked Data Fragments thus generalize
 all types of solutions to offer access to Linked Data.
