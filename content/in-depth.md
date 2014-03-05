@@ -12,7 +12,7 @@ together with their **metadata** and the **controls** to retrieve related Linked
 
 Examples of Linked Data Fragments include:
 
-- **SPARQL results** _([example](http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=CONSTRUCT+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D%0D%0AWHERE+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D&format=text%2Fturtle))_:
+- **SPARQL CONSTRUCT results** _([example](http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=CONSTRUCT+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D%0D%0AWHERE+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D&format=text%2Fturtle))_:
   their selector is a CONSTRUCT query,
   their metadata set is empty,
   and their control set includes the endpoint URI,
