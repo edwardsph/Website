@@ -10,8 +10,8 @@
 </head>
 <body class="<%= @item[:title].downcase.gsub(/[^a-z]/, '') %>">
   <nav>
-    <p><a href="/">Linked Data Fragments</a></p>
-    <ul>
+    <p><a href="/">Linked Data Fragments</a></p><%
+    %><ul>
       <% @items.find_all{|c| c[:extension] =~ /^md/}.
                 sort{|a,b| a[:filename] <=> b[:filename]}.
                 sort{|a,b| (a[:order] || 10) <=> (b[:order] || 10)}.
