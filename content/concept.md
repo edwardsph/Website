@@ -10,7 +10,6 @@ On today's Web, Linked Data is usually available as fragments of one of these 3�
 
 - A **SPARQL CONSTRUCT result** is a fragment that corresponds to a [SPARQL CONSTRUCT](http://www.w3.org/TR/sparql11-query/#construct) query
   _([example](http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=CONSTRUCT+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D%0D%0AWHERE+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D&format=text%2Fturtle))_.
-- A **SPARQL Graph Store HTTP Protocol Resource** is a RDF Named Graph accessible through the [SPARQL Graph Store HTTP Protocol](http://www.w3.org/TR/2013/REC-sparql11-http-rdf-update-20130321/)
 - A **subject page** is a fragment about a specific subject in the dataset
   _([example](http://dbpedia.org/page/Linked_data))_.
 - A **data dump** is one large fragment that contains the entire dataset
