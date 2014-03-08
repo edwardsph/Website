@@ -149,13 +149,25 @@ body.home {
     font-size: 1.2em;
 
     p {
-      margin: 4em 0;
+      margin: 2em 0;
+      &.story {
+        margin: 4em 0;
+      }
     }
   }
 
   img.aside {
     float: right;
     height: 7.2em;
+  }
+}
+
+.screenshot {
+  img {
+    width: 190px;
+    float: right;
+    border: 1px solid #aaa;
+    margin-left: 20px;
   }
 }
 
@@ -252,6 +264,10 @@ body.home {
         padding: 5px 10px;
       }
     }
+  }
+
+  .screenshot {
+    display: none;
   }
 }
 

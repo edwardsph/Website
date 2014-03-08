@@ -21,6 +21,7 @@ The Web is full of high-quality Linked Data.
 Public SPARQL endpoints are often unavailable,
 <br>
 because they need to answer many unique queries.
+{:.story}
 
 
 <img src="/images/local.svg" class="aside" alt="" />
@@ -31,6 +32,7 @@ You could set up a local endpoint using data dumps.
 Your data is never up to date
 <br>
 and your client cannot query _every_ dataset.
+{:.story}
 
 <img src="/images/ldf.svg" class="aside" alt="" />
 The idea of Linked Data Fragments is to
@@ -41,8 +43,12 @@ Servers can offer data at low processing cost
 <br>
 in a way that enables client-side querying.
 [**Here's how.**](/concept/)
+{:.story}
 
-You can start publishing such smart Linked Data Fragments right now.
+Try an [**online Linked Data Fragments client**](http://client.linkeddatafragments.org/)
+or download a [**standalone client**](https://github.com/LinkedDataFragments/Client).
+
+Start publishing such smart Linked Data Fragments _right now_.
 [**Install the server.**](/software/)
 <br>
 Want to explore a server first?
