@@ -2,7 +2,7 @@
 title: Software
 ---
 
-## Try a client of basic Linked Data Fragments
+## Try a client of basic Linked Data Fragments {#client}
 
 [![](/images/client.png)](http://client.linkeddatafragments.org/){:.screenshot}
 The client solves SPARQL queries
@@ -21,7 +21,7 @@ All source code is available on GitHub under the MIT license.
 - [**Install the Linked Data Fragments client**](https://github.com/LinkedDataFragments/Client)
   _([source code](https://github.com/LinkedDataFragments/Client))_.
 
-## Install a server of basic Linked Data Fragments
+## Install a server of basic Linked Data Fragments {#server}
 
 [![](/images/server.png)](http://data.linkeddatafragments.org/){:.screenshot}
 SPARQL endpoints and subject page servers offer Linked Data Fragments,
