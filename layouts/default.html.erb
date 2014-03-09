@@ -24,7 +24,19 @@
     <% unless @item[:header] == false %>
       <h1><%= h @item[:title] %></h1>
     <% end %>
-    <%= yield %>
+    <% body = yield %>
+    <% if @item[:summarize] %>
+      <h2>Overview</h2>
+      <ul class="overview">
+      <%
+         headers = body.scan(/<h2 id="([^"]+)">(.*?)<\/h2>/)
+         headers.each do |header|
+      %>
+        <li><a href="#<%= header[0] %>"><%= header[1] %></a></li>
+      <% end %>
+      </ul>
+    <% end %>
+    <%= body %>
   </main>
   <footer>
     <p>

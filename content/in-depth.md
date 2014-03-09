@@ -1,6 +1,7 @@
 ---
 title: In depth
 order: 50
+summarize: true
 ---
 
 ## What is a Linked Data Fragment? {#ldf}
