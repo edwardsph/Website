@@ -13,6 +13,7 @@
     <p><a href="/">Linked Data Fragments</a></p><%
     %><ul>
       <% @items.find_all{|c| c[:extension] =~ /^md/}.
+                find_all{|c| c[:menu] != false }.
                 sort{|a,b| a[:filename] <=> b[:filename]}.
                 sort{|a,b| (a[:order] || 10) <=> (b[:order] || 10)}.
                 each do |page|
