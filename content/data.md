@@ -3,8 +3,6 @@ title: Data
 order: 4
 ---
 
-# Data
-
 ## Try our Open Linked Data Fragments server
 We offer an open basic Linked Data Fragments server
 at [http://data.linkeddatafragments.org/](http://data.linkeddatafragments.org/).

@@ -3,8 +3,6 @@ title: Concept
 order: 3
 ---
 
-# Concept
-
 ## All datasets are available as Linked Data Fragments
 On today's Web, Linked Data is usually available as fragments of one of these 3 types:
 

@@ -1,6 +1,7 @@
 ---
 order: 0
 title: Home
+header: false
 ---
 
 <div id="billboard" markdown="1">

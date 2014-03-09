@@ -21,6 +21,9 @@
     </ul>
   </nav>
   <main>
+    <% unless @item[:header] == false %>
+      <h1><%= h @item[:title] %></h1>
+    <% end %>
     <%= yield %>
   </main>
   <footer>

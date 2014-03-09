@@ -3,8 +3,6 @@ title: In depth
 order: 50
 ---
 
-# In depth
-
 ## What is a Linked Data Fragment? {#ldf}
 A **Linked Data Fragment** (LDF) of a Linked Data dataset
 is a resource consisting of those elements of this dataset that match a specific **selector**,

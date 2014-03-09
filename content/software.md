@@ -2,8 +2,6 @@
 title: Software
 ---
 
-# Software
-
 ## Try a client of basic Linked Data Fragments
 
 [![](/images/client.png)](http://client.linkeddatafragments.org/){:.screenshot}
