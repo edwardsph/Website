@@ -31,7 +31,7 @@ enable **efficient client-side querying**.
 <br>
 A basic Linked Data Fragments server
 can work in front of a SPARQL endpoint
-or on top of [other datasources](https://github.com/LinkedDataFragments/Server/tree/master/lib).
+or on top of [other datasources](https://github.com/LinkedDataFragments/Server#supported-data-sources).
 
 The source code is available on GitHub under the MIT license.
 
