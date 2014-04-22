@@ -20,7 +20,7 @@ Examples of Linked Data Fragments include:
 - **subject pages** _([example](http://dbpedia.org/page/Linked_data))_:
   their selector is a subject URI,
   their metadata set is often empty,
-  and their control set is given by predicate and URIs that can be dereferenced.
+  and their control set is given by URIs that can be dereferenced.
 
 - **data dumps** _([example](http://downloads.dbpedia.org/3.9/en/))_:
   their selector is the universal selector,
