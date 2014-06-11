@@ -5,8 +5,8 @@ title: Software
 ## Try a client of basic Linked Data Fragments {#client}
 
 [![](/images/client.png)](http://client.linkeddatafragments.org/){:.screenshot}
-A client solves SPARQL queries
-using only [basic Linked Data Fragments](/concept/#basic-ldf).
+A client executes SPARQL queries
+using [basic Linked Data Fragments](/concept/#basic-ldf).
 <br>
 This way, servers only need to publish lightweight fragments of a dataset,
 <br>
@@ -14,14 +14,14 @@ providing a **scalable yet efficient** way to query Linked Data.
 
 - [**Try the online client**](http://client.linkeddatafragments.org/)
   _([source code](http://client.linkeddatafragments.org/))_.
-- [**Install the _basic LDF_ client for JavaScript**](https://github.com/LinkedDataFragments/Client.js)
+- [**Use the _basic LDF_ client for JavaScript**](https://github.com/LinkedDataFragments/Client.js)
   _([source code](https://github.com/LinkedDataFragments/Client.js))_.
-- [**Install the _basic LDF_ client for Java (Jena)**](https://github.com/LinkedDataFragments/Client.Java)
+- [**Use the _basic LDF_ client for Java (Jena)**](https://github.com/LinkedDataFragments/Client.Java)
   _([source code](https://github.com/LinkedDataFragments/Client.Java))_.
 
-All source code is available on GitHub under the MIT license.
+All source code is available on GitHub under a permissive license.
 
-## Install a server of basic Linked Data Fragments {#server}
+## Host a server of basic Linked Data Fragments {#server}
 
 [![](/images/server.png)](http://data.linkeddatafragments.org/){:.screenshot}
 SPARQL endpoints and subject page servers offer Linked Data Fragments,
@@ -37,5 +37,9 @@ or on top of [other datasources](https://github.com/LinkedDataFragments/Server#
   _([source code](https://github.com/LinkedDataFragments/Server.js))_.
 - [**Install the _basic LDF_ server for Java (Tomcat)**](https://github.com/LinkedDataFragments/Server.java)
   _([source code](https://github.com/LinkedDataFragments/Server.java))_.
+- [**Install the _basic LDF_ server for NetKernel**](https://github.com/elephantbirdconsulting/netkernel-contribution/)
+  _([source code](https://github.com/elephantbirdconsulting/netkernel-contribution/blob/master/urn.com.elbeesee.triplestore.httpclient/com/elbeesee/triplestore/httpclient/FragmentsAccessor.java))_.
+- [**Install The DataTank (_basic LDF_ support built-in)**](http://thedatatank.com/)
+  _([source code](https://github.com/tdt/triples), [documentation](http://docs.thedatatank.com/))_.
 
-All source code is available on GitHub under the MIT license.
+All source code is available on GitHub under a permissive license.
