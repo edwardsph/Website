@@ -3,23 +3,24 @@ title: Concept
 order: 3
 ---
 
-## All datasets are available as Linked Data Fragments
-On today's Web, Linked Data is usually available as fragments of one of these 3 types:
+## Linked Data Fragments: a uniform view on all Linked Data interfaces
+Today's Web has three common ways in which we access Linked Data:
 
-- A **SPARQL CONSTRUCT result** is a fragment that corresponds to a [SPARQL CONSTRUCT](http://www.w3.org/TR/sparql11-query/#construct) query
-  _([example](http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=CONSTRUCT+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D%0D%0AWHERE+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D&format=text%2Fturtle))_.
-- A **subject page** is a fragment with data about a specific subject in the dataset
-  _([example](http://dbpedia.org/page/Linked_data))_.
-- A **data dump** is one large fragment that contains all data in the entire dataset
+- A **data dump** contains all triples in an entire dataset
   _([example](http://downloads.dbpedia.org/3.9/en/))_.
+- A **subject page** contains triples about a specific subject in a dataset
+  _([example](http://dbpedia.org/page/Linked_data))_.
+- A **SPARQL result** contains triples that correspond to a [SPARQL CONSTRUCT](http://www.w3.org/TR/sparql11-query/#construct) query
+  _([example](http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=CONSTRUCT+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D%0D%0AWHERE+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D&format=text%2Fturtle))_.
 
-We call each such part a **Linked Data Fragment** (LDF) of the dataset
-_([definition](/in-depth/#ldf))_.
+Instead of considering these three options in isolation,
+we want to provide a uniform view on them.
 
-Linked Data Fragments thus generalize
-all types of solutions to offer access to Linked Data.
+Therefore, we call each subset of a Linked Data collection
+a [**Linked Data Fragment**](/in-depth/#ldf) (LDF).
 <br>
-Each type is characterized by a specific kind of **selector** _(SPARQL query, subject URI, …)_,
+Each fragment is characterized
+by a specific **selector** _(subject URI, SPARQL query, …)_,
 **metadata** _(variable names, counts, …)_,
 and **controls** _(links or URIs to other fragments)_.
 
@@ -31,16 +32,9 @@ in order to optimize the balance between server and client effort.
 
 
 
-## Can we enable Web querying with Web-scale availability?
-Let's order these types of Linked Data Fragments
-by **increasing demand for server resources**.
-**SPARQL endpoints** use most server resources
-and thus have a [low availability](http://sw.deri.org/~aidanh/docs/epmonitorISWC.pdf).
-If you don't want to depend on such an endpoint,
-you download a **data dump**,
-but then you're querying a local source instead of the Web.
-With **subject pages**, servers do minimal effort,
-but clients need to [work hard](http://squin.sourceforge.net/) to solve simple queries.
+## The axis of Linked Data Fragments types
+The Linked Data Fragments vision
+allows us to visualize different HTTP interfaces for Linked Data _together_.
 
 <svg height="115">
   <marker id="rightArrow" markerWidth="10" markerHeight="10" refx="10" refy="5">
@@ -71,16 +65,26 @@ but clients need to [work hard](http://squin.sourceforge.net/) to solve simple q
   <text  x="85%"  y="95"  class="label">SPARQL endpoint</text>
 </svg>
 
+**SPARQL endpoints** are easy for clients,
+as they allow highly specific fragment selection.
+However, they also use most server resources
+and thus have a [low availability](http://sw.deri.org/~aidanh/docs/epmonitorISWC.pdf).
+If you don't want to depend on such an endpoint,
+you download a **data dump**,
+but then you're querying a local source instead of the Web.
+With **subject pages**, servers do minimal effort,
+but clients need to [work hard](http://squin.sourceforge.net/) to solve simple queries.
+
 Can we **minimize server resource usage**
 while still enabling clients to **query data sources efficiently**?
 <br>
-It turns out we can:
-such solutions exist around the middle of the above axis.
+Such solutions can be found along the above axis
+by defining new Linked Data Fragment types.
 
-## Basic Linked Data Fragments allow Web-scale, client-side querying {#basic-ldf}
-We developed a fragment type that requires only minimal effort to generate
+## Basic Linked Data Fragments enable querying with high availability {#basic-ldf}
+We developed a fragment type that requires minimal effort to generate
 and enables client-side querying.
-Such a fragment is called a **basic Linked Data Fragment** and consists of:
+Such a fragment is called a **basic Linked Data Fragment** and consists of:
 
 - **data** that corresponds to a _basic triple pattern_
   _([example](http://data.linkeddatafragments.org/dbpedia?subject=&predicate=rdf%3Atype&object=dbpedia-owl%3ARestaurant))_.
@@ -93,7 +97,4 @@ Servers that offer such fragments are called
 [**basic Linked Data Fragments servers**](/software/).
 
 A [**basic Linked Data Fragments client**](/software/)
-can solve basic graph pattern SPARQL queries efficiently.
-<br>
-With the metadata, it creates a query plan.
-Through the controls, it finds other fragments all over the Web.
+can solve many SPARQL queries efficiently.

@@ -9,9 +9,9 @@ menu: false
 # Linked Data Fragments
 
 [![Linked Data Fragments](/images/logo.svg){:.logo}
-make the Web of Data _Web-scale_
+make the Web of Data Web-scale by
 <br>
-by allowing _clients_ to query datasets.](/concept/)
+moving intelligence from _servers_ to _clients_.](/concept/)
 {:.slogan}
 </div>
 
@@ -37,7 +37,7 @@ and your client cannot query _every_ dataset.
 {:.story}
 
 <img src="/images/ldf.svg" class="aside" alt="" />
-The idea of Linked Data Fragments is to
+With Linked Data Fragments, we explore interfaces to
 <br>
 **solve queries at the client side with server data.**
 <br>

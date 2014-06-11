@@ -6,26 +6,26 @@ summarize: true
 
 ## What is a Linked Data Fragment? {#ldf}
 A **Linked Data Fragment** (LDF) of a Linked Data dataset
-is a resource consisting of those elements of this dataset that match a specific **selector**,
-together with their **metadata** and the **controls** to retrieve related Linked Data Fragments.
+is a resource consisting of those triples of this dataset that match a specific **selector**,
+together with **metadata** and **hypermedia controls**.
 
 Examples of Linked Data Fragments include:
 
-- **SPARQL CONSTRUCT results** _([example](http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=CONSTRUCT+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D%0D%0AWHERE+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D&format=text%2Fturtle))_:
-  their selector is a CONSTRUCT query,
-  their metadata set is empty,
-  and their control set includes the endpoint URI,
-  which allows to retrieve other SPARQL results.
+- **data dumps** _([example](http://downloads.dbpedia.org/3.9/en/))_:
+  their selector is the universal selector,
+  their metadata set includes the file size,
+  and their control set is empty.
 
 - **subject pages** _([example](http://dbpedia.org/page/Linked_data))_:
   their selector is a subject URI,
   their metadata set is often empty,
   and their control set is given by URIs that can be dereferenced.
 
-- **data dumps** _([example](http://downloads.dbpedia.org/3.9/en/))_:
-  their selector is the universal selector,
-  their metadata set includes the file size,
-  and their control set is empty.
+- **SPARQL results** _([example](http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=CONSTRUCT+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D%0D%0AWHERE+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D&format=text%2Fturtle))_:
+  their selector is a CONSTRUCT query,
+  their metadata set is empty,
+  and their control set includes the endpoint URI,
+  which allows to retrieve other SPARQL results.
 
 ## What is a basic Linked Data Fragment? {#basic-ldf}
 A **basic Linked Data Fragment** (basic LDF) is a Linked Data Fragment
@@ -37,19 +37,19 @@ Fragments are likely _paged_ to contain only a part of the data.
 Basic LDFs _([example](http://data.linkeddatafragments.org/dbpedia?subject=&predicate=rdf%3Atype&object=dbpedia-owl%3ARestaurant))_ minimize server processing,
 while still enabling efficient querying by the client:
 
-- Compared to **SPARQL results**, basic LDFs are easier to generate
-  because the server effort is bounded.
-  In contrast, each SPARQL query can demand a theoretically unlimited amount of server resources.
+- **Data dumps** allow full querying on the client side,
+  but all processing happens locally.
+  Therefore, it is not _Web_ querying:
+  the data is likely outdated and only comes from a single source.
 
 - **Subject pages** also require low server effort,
   but they do not allow efficient querying of all graph patterns.
   For instance, finding a list of [artists](http://dbpedia.org/ontology/Artist)
   is near impossible with regular dereferencing or Linked Data querying.
 
-- **Data dumps** allow full querying on the client side,
-  but all querying happens locally.
-  Therefore, it is not _Web_ querying:
-  the data is likely outdated and only comes from a single source.
+- Compared to **SPARQL results**, basic LDFs are easier to generate
+  because the server effort is bounded.
+  In contrast, each SPARQL query can demand a theoretically unlimited amount of server resources.
 
 Our [basic Linked Data Fragments client](/software/)
 answers SPARQL queries using only basic LDFs.
@@ -67,7 +67,7 @@ can vastly improve server availability
 while still enabling client-side querying.
 
 In short, the goal of Linked Data Fragments is
-to **build _servers_ that foster intelligent _clients_**.
+to **build servers that _enable_ intelligent clients**.
 
 ## What is a Linked Data Fragments server? {#ldf-server}
 A **Linked Data Fragments server** (LDF server) is an HTTP server
