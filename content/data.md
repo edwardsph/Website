@@ -3,27 +3,64 @@ title: Data
 order: 4
 ---
 
-## Try our Open Linked Data Fragments server
-We offer an open basic Linked Data Fragments server
-at [http://data.linkeddatafragments.org/](http://data.linkeddatafragments.org/).
-
-The server hosts various datasets, including
-[DBpedia](http://data.linkeddatafragments.org/dbpedia)
-and
-[Wiktionary](http://data.linkeddatafragments.org/wiktionary).
+## Access datasets as Linked Data Fragments
+[Basic Linked Data Fragments](/concept/#basic-ldf)
+provide triple-pattern-based access to a dataset.
 <br>
-You can execute queries on these datasets with a [Linked Data Fragments client](/software/).
+This enables **client-side querying** of live data with **high availability** at **low cost**.
+<br>
+You can freely access the datasets below as basic Linked Data Fragments.
 
-We can offer basic Linked Data Fragments **with high availability**
-because [server resource usage is minimal](/concept/).
-With a public SPARQL endpoint, we would need a much stronger infrastructure
-to offer the same data in a queryable way.
-[Try the online SPARQL client](http://client.linkeddatafragments.org/).
+### Linked Data Fragments hosted by us at [data.linkeddatafragments.org](http://data.linkeddatafragments.org/)
 
-## Host your own Linked Data Fragments server
-You can easily deploy your own server
+  - **[DBpedia](http://data.linkeddatafragments.org/dbpedia)**, the Linked Data version of Wikipedia
+    _([query these fragments](http://client.linkeddatafragments.org/))_
+  - **[GeoNames](http://data.linkeddatafragments.org/geonames)**, a dataset of countries and over 8 million placenames
+  - **[LinkedGeoData](http://data.linkeddatafragments.org/linkedgeodata)**, OpenStreetMap as Linked Data
+  - **[Wiktionary](http://data.linkeddatafragments.org/wiktionary)**, a dictionary of the English language
+  - **[YAGO2s](http://data.linkeddatafragments.org/yago2s)**, a huge semantic knowledge base
+  - **[EventMedia](http://data.linkeddatafragments.org/eventmedia?object=http%3A%2F%2Flinkedevents.org%2Fontology%2FEvent)**, an events data source from EURECOM
+
+
+### Linked Data Fragments hosted by [KBOdata](http://kbodata.be/)
+
+  - **[Belgian Crossroads Bank for Enterprises](http://data.kbodata.be/fragments)**
+    _([query these fragments](http://client.linkeddatafragments.org/#startFragment=http%3A%2F%2Fdata.kbodata.be%2Ffragments))_
+
+### Linked Data Fragments hosted by [iRail](https://hello.irail.be/)
+
+  - **[Departures of Belgian trains](http://archive.irail.be/irail?predicate=http%3A%2F%2Fsemweb.mmlab.be%2Fns%2Frplod%2FscheduledDepartureTime)**
+
+### Linked Data Fragments hosted by the [EWI project](http://ewi.mmlab.be/)
+
+  - **[Contact details of cities in Flanders](ewi.mmlab.be/cd/all)**
+    _([query these fragments](http://ewi.mmlab.be/query/#startFragment=http%3A%2F%2Fewi.mmlab.be%2Fcd%2Fall))_
+  - **[Flemish company register](ewi.mmlab.be/ba/all)**
+    _([query these fragments](http://ewi.mmlab.be/query/#startFragment=http%3A%2F%2Fewi.mmlab.be%2Fba%2Fall))_
+
+
+## Query public datasets using Linked Data Fragments
+
+You can execute SPARQL queries over these datasets with a [basic Linked Data Fragments client](/software/).
+
+Clients are available as _standalone applications_, _libraries_, and as _Web applications_.
+<br>
+[Try the online basic Linked Data Fragments client](http://client.linkeddatafragments.org/)
+and execute your own queries!
+
+## Publish your own Linked Data Fragments
+**You can host your dataset** in a queryable way at low cost and with high availability
+using [a free LDF server](/software/#server).
+<br>
+Deploy your own server easily
 on top of an existing SPARQL endpoint.
-[Download the server.](/software/)
+[Download your server.](/software/#server)
+
+**Do you already publish basic Linked Data Fragments?**
 <br>
-Because this server only executes simple queries on your endpoint,
-there are no scalability issues.
+[Let us know](mailto:ruben.verborgh@ugent.be?subject=I%20publish%20Linked%20Data%20Fragments), we'll add you to the list on this page!
+
+**Do you want us to publish your dataset?**
+<br>
+Even though Linked Data Fragments only requires a light server,
+we can [host your dataset for you](mailto:ruben.verborgh@ugent.be?subject=Host%20my%20dataset).
