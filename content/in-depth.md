@@ -4,7 +4,7 @@ order: 50
 summarize: true
 ---
 
-## What is a Linked Data Fragment? {#ldf}
+## What is a _Linked Data Fragment_? {#ldf}
 A **Linked Data Fragment** (LDF) of a Linked Data dataset
 is a resource consisting of those triples of this dataset that match a specific **selector**,
 together with **metadata** and **hypermedia controls**.
@@ -27,11 +27,13 @@ Examples of Linked Data Fragments include:
   and their control set includes the endpoint URI,
   which allows to retrieve other SPARQL results.
 
-## What is a basic Linked Data Fragment? {#basic-ldf}
-A **basic Linked Data Fragment** (basic LDF) is a Linked Data Fragment
+## What is a _basic Linked Data Fragment_? {#basic-ldf}
+A **_basic_ Linked Data Fragment** (basic LDF) or **triple pattern fragment**
+is a Linked Data Fragment
 with a **triple pattern** as selector, **count** metadata,
 and the controls to **retrieve any other basic LDF** of the same dataset,
 in particular other fragments the matching elements belong to.
+<br>
 Fragments are likely _paged_ to contain only a part of the data.
 
 Basic LDFs _([example](http://data.linkeddatafragments.org/dbpedia?subject=&predicate=rdf%3Atype&object=dbpedia-owl%3ARestaurant))_ minimize server processing,
@@ -54,7 +56,7 @@ while still enabling efficient querying by the client:
 Our [basic Linked Data Fragments client](/software/)
 answers SPARQL queries using only basic LDFs.
 
-## What is the purpose of Linked Data Fragments? {#purpose}
+## What is the purpose of _Linked Data Fragments_? {#purpose}
 With Linked Data Fragments, we aim to discuss ways to publish Linked Data
 in addition to SPARQL endpoints, subject pages, and data dumps.
 In particular, we want to **enable clients to query the Web of Data**,
@@ -69,7 +71,7 @@ while still enabling client-side querying.
 In short, the goal of Linked Data Fragments is
 to **build servers that _enable_ intelligent clients**.
 
-## What is a Linked Data Fragments server? {#ldf-server}
+## What is a _Linked Data Fragments_ server? {#ldf-server}
 A **Linked Data Fragments server** (LDF server) is an HTTP server
 that offers Linked Data Fragments covering one or more datasets
 in at least one triple-based representation.
@@ -78,7 +80,7 @@ This means that SPARQL endpoints,
 Pubby servers, HTTP servers with RDFa, …
 are all LDF servers.
 
-## What is a basic Linked Data Fragments server? {#basic-ldf-server}
+## What is a _basic Linked Data Fragments_ server? {#basic-ldf-server}
 A **basic Linked Data Fragments server** (basic LDF server) is a Linked Data Fragments server
 that offers at least the basic Linked Data Fragments of certain datasets.
 
@@ -88,7 +90,7 @@ An example basic LDF server is available at
 You can set up your own basic LDF server
 with the open-source [server software](/software/).
 
-## What is a Linked Data Fragments client? {#ldf-client}
+## What is a _basic Linked Data Fragments_ client? {#ldf-client}
 A **Linked Data Fragments client** (LDF client)
 consumes basic Linked Data Fragments in a specific way.
 
@@ -100,7 +102,7 @@ such as our [basic Linked Data Fragments client](/software/)
 perform more complicated tasks,
 like answering SPARQL queries using only basic LDFs.
 
-## How do basic Linked Data Fragments differ from SPARQL results? {#sparql}
+## How do _basic Linked Data Fragments_ differ from SPARQL results? {#sparql}
 First of all, results of SPARQL CONSTRUCT queries _are_ Linked Data Fragments,
 because they represent a fragment of the underlying dataset.
 However, they are not _basic_ Linked Data Fragments,
@@ -125,7 +127,7 @@ Moving processing from server to client leads to higher scalability.
 Linked Data Fragments allows you to publish your dataset in a _queryable way_
 without having to worry about server stability and availability issues.
 
-## How do basic Linked Data Fragments differ from data dumps? {#data-dumps}
+## How do _basic Linked Data Fragments_ differ from data dumps? {#data-dumps}
 Another way to avoid depending on public SPARQL endpoints
 is to download a data dump and host a SPARQL server locally.
 This would give you a strong performance advantage over public endpoints.
@@ -138,7 +140,7 @@ Basic Linked Data Fragment servers aim to
 bring the availability rates of private endpoints to the public Web
 by moving intensive processing to the client side.
 
-## How do Linked Data Fragments relate to Linked Data Platform? {#ldp}
+## How do _Linked Data Fragments_ relate to Linked Data Platform? {#ldp}
 “[Linked Data Platform](http://www.w3.org/TR/ldp/)” is a W3C Working Draft
 that describes a _read-write_ Linked Data architecture.
 “Linked Data Fragments” is a generic term
@@ -160,7 +162,7 @@ Most importantly, Linked Data Fragments and Linked Data Platform are **orthogona
 a server can offer basic Linked Data Fragments,
 while also implementing the Linked Data Platform read-write interface.
 
-## How will Linked Data Fragments evolve? {#evolve}
+## How will _Linked Data Fragments_ evolve? {#evolve}
 At the moment, we have proposed basic Linked Data Fragments,
 accompanied by a [server](/software/#server) and [client](/software/#client) implementation.
 They already indicate that querying with such fragments is a viable strategy.
@@ -170,7 +172,7 @@ and explore other fragment types.
 This will further improve performance,
 while maintaining high availability on the server side.
 
-## Who is working on Linked Data Fragments? {#who}
+## Who is working on _Linked Data Fragments_? {#who}
 _Linked Data Fragments_ is an ongoing project at
 [Multimedia Lab](http://multimedialab.elis.ugent.be/),
 [Ghent University](http://www.ugent.be/) –

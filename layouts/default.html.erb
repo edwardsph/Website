@@ -33,7 +33,7 @@
          headers = body.scan(/<h2 id="([^"]+)">(.*?)<\/h2>/)
          headers.each do |header|
       %>
-        <li><a href="#<%= header[0] %>"><%= header[1] %></a></li>
+        <li><a href="#<%= header[0] %>"><%= header[1].gsub(/<[^>]+>/, '') %></a></li>
       <% end %>
       </ul>
     <% end %>

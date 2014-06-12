@@ -5,10 +5,10 @@ title: Software
 ## Try a client of basic Linked Data Fragments {#client}
 
 [![](/images/client.png)](http://client.linkeddatafragments.org/){:.screenshot}
-A client executes SPARQL queries
+These clients execute SPARQL queries
 using [basic Linked Data Fragments](/concept/#basic-ldf).
 <br>
-This way, servers only need to publish lightweight fragments of a dataset,
+This way, servers only need to publish triple pattern fragments of a dataset,
 <br>
 providing a **scalable yet efficient** way to query Linked Data.
 
