@@ -51,6 +51,14 @@ h3 {
   margin: 1em 0 0;
 }
 
+dt {
+  font-weight: bold;
+  margin-top: .5em;
+}
+dd {
+  margin-left: 20px;
+}
+
 main ul {
   list-style: none;
 
@@ -68,7 +76,7 @@ main ul {
 
 nav {
   background-color: fade(black, 4%);
-  border-radius: 10px;
+  border-radius: 10px 5px 5px 10px;
   margin: 10px 0 30px;
 
   * {
@@ -87,9 +95,9 @@ nav {
     }
   }
   ul {
-    padding-left: 20px;
+    padding-left: 8px;
     li {
-      padding: 5px 18px;
+      padding: 5px 10px;
       border-radius: 5px;
       letter-spacing: .1ex; // correct for bold active links
       &.active {
@@ -104,15 +112,6 @@ nav {
         transition: all 0.2s;
       }
     }
-  }
-
-  &:after {
-    content: " ";
-    padding: 5px 5px 5px 0;
-    background-color: @accent;
-    border-right: 2px solid @accent;
-    border-radius: 3px 10px 10px 3px;
-    float: right;
   }
 }
 
