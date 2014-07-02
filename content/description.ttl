@@ -27,9 +27,9 @@
                                 assoc:person <http://ruben.verborgh.org/#me> ].
 
 <#ldf-client> a doap:Project;
-              rdfs:label "Basic Linked Data Fragments client";
-              doap:name  "Basic Linked Data Fragments client";
-              doap:description "The Basic Linked Data Fragments client solves SPARQL queries by requesting basic triple patterns of a dataset."@en;
+              rdfs:label "Triple Pattern Fragments client";
+              doap:name  "Triple Pattern Fragments client";
+              doap:description "The Triple Pattern Fragments client solves SPARQL queries by requesting triple patterns of a dataset."@en;
               doap:homepage <http://linkeddatafragments.org/>;
               foaf:page <http://linkeddatafragments.org/>;
               doap:repository <https://github.com/LinkedDataFragments/Client>;
@@ -39,9 +39,9 @@
               project:relatedProject <#ldf>, <#ldf-server>.
 
 <#ldf-server> a doap:Project;
-              rdfs:label "Basic Linked Data Fragments server";
-              doap:name  "Basic Linked Data Fragments server";
-              doap:description "The Basic Linked Data Fragments server offers all basic triple patterns of given datasets."@en;
+              rdfs:label "Triple Pattern Fragments server";
+              doap:name  "Triple Pattern Fragments server";
+              doap:description "The Triple Pattern Fragments server publishes all triple patterns of given datasets."@en;
               doap:homepage <http://linkeddatafragments.org/>;
               foaf:page <http://linkeddatafragments.org/>;
               doap:repository <https://github.com/LinkedDataFragments/Server>;

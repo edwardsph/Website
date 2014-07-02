@@ -61,7 +61,7 @@ allows us to visualize different HTTP interfaces for Linked Data _together_.
   <line x1="85%" x2="85%" y1="69" y2="80" />
   <text  x="7%"   y="95"  class="label">data dump</text>
   <text  x="22%"  y="95"  class="label">subject page</text>
-  <text  x="43%"  y="95"  class="label"><a xlink:href="#basic-ldf">triple pattern fragment</a></text>
+  <text  x="43%"  y="95"  class="label"><a xlink:href="#tpf">triple pattern fragment</a></text>
   <text  x="85%"  y="95"  class="label">SPARQL query result</text>
 </svg>
 
@@ -81,11 +81,11 @@ while still enabling clients to **query data sources efficiently**?
 Such solutions can be found along the above axis
 by defining new Linked Data Fragment types.
 
-## New fragment types enable high-availability querying at low cost {#basic-ldf}
+## New fragment types enable high-availability querying at low cost {#tpf}
 We develop fragment types that require minimal server effort
 and enable efficient client-side querying.
-One such type is called a **_basic_ Linked Data Fragment**
-or **triple pattern fragment**.
+One such type is called a **Triple Pattern Fragment**
+(or **_basic_ Linked Data Fragment**).
 It consists of:
 
 - **data** that corresponds to a triple pattern
@@ -96,7 +96,7 @@ It consists of:
   _([example](http://data.linkeddatafragments.org/dbpedia?subject=&predicate=&object=%22John%22%40en))_.
 
 Servers that offer such fragments are called
-[**_basic Linked Data Fragments_ servers**](/software/).
+[**_Triple Pattern Fragments_ servers**](/software/#server).
 
-A [**_basic Linked Data Fragments_ client**](/software/)
+A [**_Triple Pattern Fragments_ client**](/software/#client)
 can solve many SPARQL queries efficiently.

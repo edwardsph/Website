@@ -4,12 +4,12 @@ order: 4
 ---
 
 ## Access datasets as Linked Data Fragments
-[Basic Linked Data Fragments](/concept/#basic-ldf)
+[Triple Pattern Fragments](/concept/#tpf)
 provide triple-pattern-based access to a dataset.
 <br>
 This enables **client-side querying** of live data with **high availability** at **low cost**.
 <br>
-You can freely access the datasets below as basic Linked Data Fragments.
+You can freely access the datasets below as Triple Pattern Fragments.
 
 ### Linked Data Fragments hosted by us at [data.linkeddatafragments.org](http://data.linkeddatafragments.org/)
 
@@ -41,11 +41,11 @@ You can freely access the datasets below as basic Linked Data Fragments.
 
 ## Query public datasets using Linked Data Fragments
 
-You can execute SPARQL queries over these datasets with a [basic Linked Data Fragments client](/software/).
+You can execute SPARQL queries over these datasets with a [Triple Pattern Fragments client](/software/).
 
 Clients are available as _standalone applications_, _libraries_, and as _Web applications_.
 <br>
-[Try the online basic Linked Data Fragments client](http://client.linkeddatafragments.org/)
+[Try the online Triple Pattern Fragments client](http://client.linkeddatafragments.org/)
 and execute your own queries!
 
 ## Publish your own Linked Data Fragments
@@ -56,7 +56,7 @@ Deploy your own server easily
 on top of an existing SPARQL endpoint.
 [Download your server.](/software/#server)
 
-**Do you already publish basic Linked Data Fragments?**
+**Do you already publish Linked Data Fragments?**
 <br>
 [Let us know](mailto:ruben.verborgh@ugent.be?subject=I%20publish%20Linked%20Data%20Fragments), we'll add you to the list on this page!
 

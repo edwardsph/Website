@@ -27,17 +27,20 @@ Examples of Linked Data Fragments include:
   and their control set includes the endpoint URI,
   which allows to retrieve other SPARQL results.
 
-## What is a _basic Linked Data Fragment_? {#basic-ldf}
-A **_basic_ Linked Data Fragment** (basic LDF) or **triple pattern fragment**
+The [Linked Data Fragments specification](http://www.hydra-cg.com/spec/latest/linked-data-fragments)
+formally captures this concept.
+
+## What is a _Triple Pattern Fragment_? {#tpf}
+A **Triple Pattern Fragment** (or **_basic_ Linked Data Fragment**)
 is a Linked Data Fragment
-with a **triple pattern** as selector, **count** metadata,
-and the controls to **retrieve any other basic LDF** of the same dataset,
+with a **triple pattern** as selector, **count** metadata,
+and controls to **retrieve any other triple pattern fragment** of the same dataset,
 in particular other fragments the matching elements belong to.
 <br>
 Fragments are likely _paged_ to contain only a part of the data.
 
-Basic LDFs _([example](http://data.linkeddatafragments.org/dbpedia?subject=&predicate=rdf%3Atype&object=dbpedia-owl%3ARestaurant))_ minimize server processing,
-while still enabling efficient querying by the client:
+Triple Pattern Fragments _([example](http://data.linkeddatafragments.org/dbpedia?subject=&predicate=rdf%3Atype&object=dbpedia-owl%3ARestaurant))_ minimize server processing,
+while enabling efficient querying by clients:
 
 - **Data dumps** allow full querying on the client side,
   but all processing happens locally.
@@ -49,12 +52,15 @@ while still enabling efficient querying by the client:
   For instance, finding a list of [artists](http://dbpedia.org/ontology/Artist)
   is near impossible with regular dereferencing or Linked Data querying.
 
-- Compared to **SPARQL results**, basic LDFs are easier to generate
+- Compared to **SPARQL results**, Triple Pattern Fragments are easier to generate
   because the server effort is bounded.
-  In contrast, each SPARQL query can demand a theoretically unlimited amount of server resources.
+  In contrast, each SPARQL query can demand an unlimited amount of server resources.
 
-Our [basic Linked Data Fragments client](/software/)
-answers SPARQL queries using only basic LDFs.
+The [Triple Pattern Fragments specification](http://www.hydra-cg.com/spec/latest/triple-pattern-fragments/)
+formally captures this concept.
+
+A [Triple Pattern Fragments client](/software/#client)
+answers SPARQL queries using only Triple Pattern Fragments.
 
 ## What is the purpose of _Linked Data Fragments_? {#purpose}
 With Linked Data Fragments, we aim to discuss ways to publish Linked Data
@@ -64,7 +70,7 @@ which is impossible/unreliable today because of
 the [low availability of public SPARQL endpoints](http://sw.deri.org/~aidanh/docs/epmonitorISWC.pdf).
 
 New types of Linked Data Fragments,
-such as [basic Linked Data Fragments](#basic-ldf),
+such as [Triple Pattern Fragments](#tpf),
 can vastly improve server availability
 while still enabling client-side querying.
 
@@ -80,46 +86,46 @@ This means that SPARQL endpoints,
 Pubby servers, HTTP servers with RDFa, …
 are all LDF servers.
 
-## What is a _basic Linked Data Fragments_ server? {#basic-ldf-server}
-A **basic Linked Data Fragments server** (basic LDF server) is a Linked Data Fragments server
-that offers at least the basic Linked Data Fragments of certain datasets.
+## What is a _Triple Pattern Fragments_ server? {#tpf-server}
+A **Triple Pattern Fragments server** is a Linked Data Fragments server
+that offers at least the Triple Pattern Fragments of certain datasets.
 
-An example basic LDF server is available at
+An example Triple Pattern Fragments server is available at
 [data.linkeddatafragments.org](http://data.linkeddatafragments.org/).
 <br>
-You can set up your own basic LDF server
+You can set up your own server
 with the open-source [server software](/software/).
 
-## What is a _basic Linked Data Fragments_ client? {#ldf-client}
+## What is a _Triple Pattern Fragments_ client? {#tpf-client}
 A **Linked Data Fragments client** (LDF client)
-consumes basic Linked Data Fragments in a specific way.
+consumes Triple Pattern Fragments in a certain way.
 
 A client such as your Web browser
-allows to browse [basic Linked Data Fragments](http://data.linkeddatafragments.org/dbpedia?subject=&predicate=rdf%3Atype&object=dbpedia-owl%3ARestaurant).
+allows to browse [Triple Pattern Fragments](http://data.linkeddatafragments.org/dbpedia?subject=&predicate=rdf%3Atype&object=dbpedia-owl%3ARestaurant).
 <br>
 More complex clients,
-such as our [basic Linked Data Fragments client](/software/)
+such as our [Triple Pattern Fragments client](/software/)
 perform more complicated tasks,
-like answering SPARQL queries using only basic LDFs.
+like answering SPARQL queries using only Triple Pattern Fragments.
 
-## How do _basic Linked Data Fragments_ differ from SPARQL results? {#sparql}
-First of all, results of SPARQL CONSTRUCT queries _are_ Linked Data Fragments,
+## How do _Triple Pattern Fragments_ differ from SPARQL results? {#sparql}
+First of all, results of SPARQL CONSTRUCT queries are Linked Data Fragments,
 because they represent a fragment of the underlying dataset.
-However, they are not _basic_ Linked Data Fragments,
+However, they are not _Triple Pattern Fragments_,
 because those have a single _triple pattern_ as selector,
 and provide _count metadata_ and _controls_ towards other fragments.
 <br>
 Compare an [example SPARQL fragment](http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=CONSTRUCT+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D%0D%0AWHERE+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D&format=text%2Fturtle)
-to an [example basic Linked Data Fragment](http://data.linkeddatafragments.org/dbpedia?subject=&predicate=rdf%3Atype&object=dbpedia-owl%3ARestaurant).
+to an [example Triple Pattern Fragments](http://data.linkeddatafragments.org/dbpedia?subject=&predicate=rdf%3Atype&object=dbpedia-owl%3ARestaurant).
 
 Each individual SPARQL query can take a lot of processing time.
-In contrast, basic Linked Data Fragments are **easy to generate**.
-Furthermore, the number of basic Linked Data Fragments for each dataset is finite,
+In contrast, Triple Pattern Fragments are **easy to generate**.
+Furthermore, the number of Triple Pattern Fragments for each dataset is finite,
 so they can be **precomputed and cached efficiently**.
 
 With a SPARQL endpoint, different clients expect a single server
 to answer many different complex questions.
-With a basic Linked Data Fragments server,
+With a Triple Pattern Fragments server,
 different clients only ask for **reusable, simple answers**
 and perform query-specific tasks themselves.
 Moving processing from server to client leads to higher scalability.
@@ -127,7 +133,7 @@ Moving processing from server to client leads to higher scalability.
 Linked Data Fragments allows you to publish your dataset in a _queryable way_
 without having to worry about server stability and availability issues.
 
-## How do _basic Linked Data Fragments_ differ from data dumps? {#data-dumps}
+## How do _Triple Pattern Fragments_ differ from data dumps? {#data-dumps}
 Another way to avoid depending on public SPARQL endpoints
 is to download a data dump and host a SPARQL server locally.
 This would give you a strong performance advantage over public endpoints.
@@ -136,7 +142,7 @@ However, this is **not Web querying**.
 The data is _not up to date_,
 and only specific datasets are available.
 
-Basic Linked Data Fragment servers aim to
+Triple Pattern Fragments servers aim to
 bring the availability rates of private endpoints to the public Web
 by moving intensive processing to the client side.
 
@@ -150,8 +156,8 @@ More specifically, with Linked Data Fragments,
 we aim to investigate scalable ways to publish Linked Data
 that **enable clients to efficiently perform complex operations** such as querying.
 
-A crucial difference between _basic_ Linked Data Fragments and Linked Data Platform
-is that the latter proposes [one specific service](http://lists.w3.org/Archives/Public/public-ldp/2012Nov/0029.html);
+A crucial difference between _Triple Pattern Fragments_ and Linked Data Platform
+is that the latter proposes [one specific service](http://lists.w3.org/Archives/Public/public-ldp/2012Nov/0029.html);
 that is, a [detailed set of rules](http://www.w3.org/TR/ldp/#linked-data-platform-resources)
 that have to be followed.
 <br>
@@ -159,11 +165,11 @@ In contrast, we envision various Linked Data Servers with different APIs
 to be used in more flexible ways.
 
 Most importantly, Linked Data Fragments and Linked Data Platform are **orthogonal**;
-a server can offer basic Linked Data Fragments,
+a server can offer Triple Pattern Fragments,
 while also implementing the Linked Data Platform read-write interface.
 
 ## How will _Linked Data Fragments_ evolve? {#evolve}
-At the moment, we have proposed basic Linked Data Fragments,
+At the moment, we have proposed Triple Pattern Fragments,
 accompanied by a [server](/software/#server) and [client](/software/#client) implementation.
 They already indicate that querying with such fragments is a viable strategy.
 
