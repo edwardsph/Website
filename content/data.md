@@ -33,9 +33,9 @@ You can freely access the datasets below as Triple Pattern Fragments.
 
 ### Linked Data Fragments hosted by the [EWI project](http://ewi.mmlab.be/)
 
-  - **[Contact details of cities in Flanders](ewi.mmlab.be/cd/all)**
+  - **[Contact details of cities in Flanders](http://ewi.mmlab.be/cd/all)**
     _([query these fragments](http://ewi.mmlab.be/query/#startFragment=http%3A%2F%2Fewi.mmlab.be%2Fcd%2Fall))_
-  - **[Flemish company register](ewi.mmlab.be/ba/all)**
+  - **[Flemish company register](http://ewi.mmlab.be/ba/all)**
     _([query these fragments](http://ewi.mmlab.be/query/#startFragment=http%3A%2F%2Fewi.mmlab.be%2Fba%2Fall))_
 
 

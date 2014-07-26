@@ -27,7 +27,7 @@ Examples of Linked Data Fragments include:
   and their control set includes the endpoint URI,
   which allows to retrieve other SPARQL results.
 
-The [Linked Data Fragments specification](http://www.hydra-cg.com/spec/latest/linked-data-fragments)
+The [Linked Data Fragments specification](http://www.hydra-cg.com/spec/latest/linked-data-fragments/)
 formally captures this concept.
 
 ## What is a _Triple Pattern Fragment_? {#tpf}
@@ -158,7 +158,7 @@ that **enable clients to efficiently perform complex operations** such as query
 
 A crucial difference between _Triple Pattern Fragments_ and Linked Data Platform
 is that the latter proposes [one specific service](http://lists.w3.org/Archives/Public/public-ldp/2012Nov/0029.html);
-that is, a [detailed set of rules](http://www.w3.org/TR/ldp/#linked-data-platform-resources)
+that is, a [detailed set of rules](http://www.w3.org/TR/ldp/#ldpr-resource)
 that have to be followed.
 <br>
 In contrast, we envision various Linked Data Servers with different APIs
