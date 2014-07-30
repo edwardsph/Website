@@ -18,8 +18,12 @@ You can freely access the datasets below as Triple Pattern Fragments.
   - **[GeoNames](http://data.linkeddatafragments.org/geonames)**, a dataset of countries and over 8 million placenames
   - **[LinkedGeoData](http://data.linkeddatafragments.org/linkedgeodata)**, OpenStreetMap as Linked Data
   - **[Wiktionary](http://data.linkeddatafragments.org/wiktionary)**, a dictionary of the English language
+  - **[DBLP](http://data.linkeddatafragments.org/dblp)**, the Computer Science Bibliography
   - **[YAGO2s](http://data.linkeddatafragments.org/yago2s)**, a huge semantic knowledge base
   - **[EventMedia](http://data.linkeddatafragments.org/eventmedia?object=http%3A%2F%2Flinkedevents.org%2Fontology%2FEvent)**, an events data source from EURECOM
+  - **[Ookaboo](http://data.linkeddatafragments.org/ookaboo)**, public domain and Creative Commons images, linked to DBpedia
+  - …
+  - **Your dataset?** [Contact us](mailto:ruben.verborgh@ugent.be?subject=Host%20my%20dataset) and we will add it for you!
 
 
 ### Linked Data Fragments hosted by [KBOdata](http://kbodata.be/)
