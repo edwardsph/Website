@@ -11,27 +11,32 @@ This enables **client-side querying** of live data with **high availability** at
 <br>
 You can freely access the datasets below as Triple Pattern Fragments.
 
-### Linked Data Fragments hosted by [DBpedia](http://fragments.dbpedia.org/)
+### Triple Pattern Fragments hosted by [DBpedia](http://fragments.dbpedia.org/)
   - **[DBpedia](http://fragments.dbpedia.org/2014/en)**, the Linked Data version of Wikipedia
     _([query these fragments](http://fragments.dbpedia.org/))_
 
-### Linked Data Fragments hosted by [KBOdata](http://kbodata.be/)
+### Triple Pattern Fragments hosted for [Wikidata](http://www.wikidata.org/)
+  - **[Wikidata](http://wikidataldf.com/)**,
+    a free linked database for humans and machines.
+    _([query these fragments](http://client.wikidataldf.com/))_
+
+### Triple Pattern Fragments hosted by [KBOdata](http://kbodata.be/)
 
   - **[Belgian Crossroads Bank for Enterprises](http://data.kbodata.be/fragments)**
     _([query these fragments](http://client.linkeddatafragments.org/#startFragment=http%3A%2F%2Fdata.kbodata.be%2Ffragments))_
 
-### Linked Data Fragments hosted by [iRail](https://hello.irail.be/)
+### Triple Pattern Fragments hosted by [iRail](https://hello.irail.be/)
 
   - **[Departures of Belgian trains](http://archive.irail.be/irail?predicate=http%3A%2F%2Fsemweb.mmlab.be%2Fns%2Frplod%2FscheduledDepartureTime)**
 
-### Linked Data Fragments hosted by the [EWI project](http://ewi.mmlab.be/)
+### Triple Pattern Fragments hosted by the [EWI project](http://ewi.mmlab.be/)
 
   - **[Contact details of cities in Flanders](http://ewi.mmlab.be/cd/all)**
     _([query these fragments](http://ewi.mmlab.be/query/#startFragment=http%3A%2F%2Fewi.mmlab.be%2Fcd%2Fall))_
   - **[Flemish company register](http://ewi.mmlab.be/ba/all)**
     _([query these fragments](http://ewi.mmlab.be/query/#startFragment=http%3A%2F%2Fewi.mmlab.be%2Fba%2Fall))_
 
-### Linked Data Fragments hosted by us at [data.linkeddatafragments.org](http://data.linkeddatafragments.org/)
+### Triple Pattern Fragments hosted by us at [data.linkeddatafragments.org](http://data.linkeddatafragments.org/)
 
   - **[DBpedia](http://data.linkeddatafragments.org/dbpedia)**, the Linked Data version of Wikipedia
     _([query these fragments](http://client.linkeddatafragments.org/))_
@@ -45,7 +50,7 @@ You can freely access the datasets below as Triple Pattern Fragments.
   - …
   - **Your dataset?** [Contact us](mailto:ruben.verborgh@ugent.be?subject=Host%20my%20dataset) and we will add it for you!
 
-## Query public datasets using Linked Data Fragments
+## Query public datasets using Triple Pattern Fragments
 
 You can execute SPARQL queries over these datasets with a [Triple Pattern Fragments client](/software/).
 
@@ -54,7 +59,7 @@ Clients are available as _standalone applications_, _libraries_, and as _Web app
 [Try the online Triple Pattern Fragments client](http://client.linkeddatafragments.org/)
 and execute your own queries!
 
-## Publish your own Linked Data Fragments
+## Publish your own Triple Pattern Fragments
 **You can host your dataset** in a queryable way at low cost and with high availability
 using [a free LDF server](/software/#server).
 <br>
@@ -62,11 +67,11 @@ Deploy your own server easily
 on top of an existing SPARQL endpoint.
 [Download your server.](/software/#server)
 
-**Do you already publish Linked Data Fragments?**
+**Do you already publish Triple Pattern Fragments?**
 <br>
 [Let us know](mailto:ruben.verborgh@ugent.be?subject=I%20publish%20Linked%20Data%20Fragments), we'll add you to the list on this page!
 
 **Do you want us to publish your dataset?**
 <br>
-Even though Linked Data Fragments only requires a light server,
+Even though Triple Pattern Fragments only requires a light server,
 we can [host your dataset for you](mailto:ruben.verborgh@ugent.be?subject=Host%20my%20dataset).
