@@ -17,7 +17,7 @@ You can freely access the datasets below as Triple Pattern Fragments.
 
 ### Triple Pattern Fragments hosted for [Wikidata](http://www.wikidata.org/)
   - **[Wikidata](http://wikidataldf.com/)**,
-    a free linked database for humans and machines.
+    a free linked database for humans and machines
     _([query these fragments](http://client.wikidataldf.com/))_
 
 ### Triple Pattern Fragments hosted by [KBOdata](http://kbodata.be/)
@@ -28,6 +28,10 @@ You can freely access the datasets below as Triple Pattern Fragments.
 ### Triple Pattern Fragments hosted by [iRail](https://hello.irail.be/)
 
   - **[Departures of Belgian trains](http://archive.irail.be/irail?predicate=http%3A%2F%2Fsemweb.mmlab.be%2Fns%2Frplod%2FscheduledDepartureTime)**
+
+### Triple Pattern Fragments hosted for [DataSalon](http://www.datasalon.com/)
+  - **[OrgRef](http://ldf-vivo.herokuapp.com/orgref)**,
+    data about organizations (universities, colleges, schools, hospitals)
 
 ### Triple Pattern Fragments hosted by the [EWI project](http://ewi.mmlab.be/)
 
