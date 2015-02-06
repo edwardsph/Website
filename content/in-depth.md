@@ -4,6 +4,10 @@ order: 50
 summarize: true
 ---
 
+## What is _Linked Data Fragments_ all about? {#video}
+[Watch this video](http://videolectures.net/iswc2014_verborgh_querying_datasets/)
+for a detailed overview of what Linked Data Fragments can do.
+
 ## What is a _Linked Data Fragment_? {#ldf}
 A **Linked Data Fragment** (LDF) of a Linked Data dataset
 is a resource consisting of those triples of this dataset that match a specific **selector**,
