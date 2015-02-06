@@ -13,6 +13,8 @@ make the Web of Data Web-scale by
 <br>
 moving intelligence from _servers_ to _clients_.](/concept/)
 {:.slogan}
+[Watch the video](http://videolectures.net/iswc2014_verborgh_querying_datasets/)
+to learn the ins and outs.
 </div>
 
 <img src="/images/sparql.svg" class="aside" alt="" />
