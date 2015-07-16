@@ -20,6 +20,10 @@ You can freely access the datasets below as Triple Pattern Fragments.
     a free linked database for humans and machines
     _([query these fragments](http://client.wikidataldf.com/))_
 
+### Triple Pattern Fragments hosted by [LOD Laundromat](http://fragments.dbpedia.org/)
+  - **[Dataset index](http://lodlaundromat.org/wardrobe/)**,
+    more than 650,000 datasets from across the Web.
+
 ### Triple Pattern Fragments hosted by [KBOdata](http://kbodata.be/)
 
   - **[Belgian Crossroads Bank for Enterprises](http://data.kbodata.be/fragments)**
