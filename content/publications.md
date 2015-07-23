@@ -10,7 +10,6 @@ order: 100
   introduces Linked Data Fragments and Triple Pattern Fragments,
   and experimentally verifies their scalability.
   General reference for Linked Data Fragments.
-  <br>
   ([Abstract](http://ruben.verborgh.org/publications/verborgh_iswc_2014/) –
    [PDF](/publications/iswc2014.pdf) –
    [BibTeX](http://ruben.verborgh.org/publications/verborgh_iswc_2014/verborgh_iswc_2014.bib))
@@ -20,12 +19,31 @@ order: 100
 - **[Web-Scale Querying through Linked Data Fragments](/publications/ldow2014.pdf)**
   <br>
   explained Linked Data Fragments for the first time
-  <br>
   ([Abstract](http://ruben.verborgh.org/publications/verborgh_ldow_2014/) –
    [PDF](/publications/ldow2014.pdf) –
    [BibTeX](http://ruben.verborgh.org/publications/verborgh_ldow_2014/verborgh_ldow_2014.bib))
   <br>
    _April 2014, Proceedings of the [7th Workshop on Linked Data on the Web (LDOW 2014)](http://events.linkeddata.org/ldow2014/)._
+
+## Extensions
+- **[Opportunistic Linked Data Querying through Approximate Membership Metadata](/publications/iswc2015-amf.pdf)**
+  <br>
+  combines Triple Pattern Fragments with a metadata feature
+  to reduce the number of requests and achieve full precision earlier
+  ([Abstract](http://ruben.verborgh.org/publications/vandersande_iswc_2015/) –
+   [PDF](/publications/iswc2015-amf.pdf) –
+   [BibTeX](http://ruben.verborgh.org/publications/vandersande_iswc_2015/vandersande_iswc_2015.bib))
+  <br>
+  _October 2015, Proceedings of the [14th International Semantic Web Conference (ISWC 2015)](http://iswc2015.semanticweb.org/)._
+
+- **[Substring Filtering for Low-Cost Linked Data Interfaces](/publications/iswc2015-substring.pdf)**
+  <br>
+  defines a substring matching feature to evaluate FILTER queries faster
+  ([Abstract](http://ruben.verborgh.org/publications/vanherwegen_iswc_2015/) –
+   [PDF](/publications/iswc2015-substring.pdf) –
+   [BibTeX](http://ruben.verborgh.org/publications/vanherwegen_iswc_2015/vanherwegen_iswc_2015.bib))
+  <br>
+  _October 2015, Proceedings of the [14th International Semantic Web Conference (ISWC 2015)](http://iswc2015.semanticweb.org/)._
 
 ## Optimizations
 - **[Query Execution Optimization for Clients of Triple Pattern Fragments](/publications/eswc2015.pdf)**
@@ -52,7 +70,7 @@ order: 100
 ## Analyses
 - **[Initial Usage Analysis of DBpedia's Triple Pattern Fragments](/publications/usewod2015.pdf)**
   <br>
-  shows that the Triple Pattern Fragments version of DBpedia
+  shows that the Triple Pattern Fragments edition of DBpedia
   had 99.999% during its first 4 months
   <br>
   ([Abstract](http://ruben.verborgh.org/publications/verborgh_usewod_2015/) –
