@@ -10,7 +10,7 @@ end
 compile '*' do
   unless item.binary?
     filter :erb
-    filter :kramdown, :auto_ids => false
+    filter :kramdown
     layout 'default'
     filter :externalize_links
     filter :html5small if compress
