@@ -68,6 +68,15 @@ order: 100
   _June 2015, Proceedings of the [12th Extended Semantic Web Conference (ESWC 2015)](http://2015.eswc-conferences.org/)._
 
 ## Analyses
+- **[DBpedia’s Triple Pattern Fragments: Usage Patterns and Insights](/publications/eswc2015-workshops.pdf)**
+  <br>
+  shows that the DBpedia Triple Pattern Fragments was used 16.8 million times
+  its first 9 months with 99.99% availability
+  ([Abstract](http://ruben.verborgh.org/publications/verborgh_eswc_2015/) –
+   [PDF](/publications/eswc2015-workshops.pdf) –
+   [BibTeX](http://ruben.verborgh.org/publications/verborgh_eswc_2015/))
+  <br>
+  _June 2015, Workshop Post Proceedings of the [12th Extended Semantic Web Conference (ESWC 2015)](http://2015.eswc-conferences.org/)._
 - **[Initial Usage Analysis of DBpedia's Triple Pattern Fragments](/publications/usewod2015.pdf)**
   <br>
   shows that the Triple Pattern Fragments edition of DBpedia
