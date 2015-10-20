@@ -5,8 +5,10 @@ summarize: true
 ---
 
 ## What is _Linked Data Fragments_ all about? {#video}
+We aim to find **new ways of publishing Linked Data**,
+in which the **query workload is distributed** between clients and servers.
 [Watch this video](http://videolectures.net/iswc2014_verborgh_querying_datasets/)
-for a detailed overview of what Linked Data Fragments can do.
+for a detailed overview of Linked Data Fragments.
 
 ## What is a _Linked Data Fragment_? {#ldf}
 A **Linked Data Fragment** (LDF) of a Linked Data dataset
@@ -35,13 +37,11 @@ The [Linked Data Fragments specification](http://www.hydra-cg.com/spec/latest/li
 formally captures this concept.
 
 ## What is a _Triple Pattern Fragment_? {#tpf}
-A **Triple Pattern Fragment** (or **_basic_ Linked Data Fragment**)
-is a Linked Data Fragment
+A **Triple Pattern Fragment** is a Linked Data Fragment
 with a **triple pattern** as selector, **count** metadata,
 and controls to **retrieve any other triple pattern fragment** of the same dataset,
 in particular other fragments the matching elements belong to.
-<br>
-Fragments are likely _paged_ to contain only a part of the data.
+Fragments are _paged_ to contain only a part of the data.
 
 Triple Pattern Fragments _([example](http://data.linkeddatafragments.org/dbpedia?subject=&predicate=rdf%3Atype&object=dbpedia-owl%3ARestaurant))_ minimize server processing,
 while enabling efficient querying by clients:
@@ -106,14 +106,11 @@ consumes Triple Pattern Fragments in a certain way.
 
 A client such as your Web browser
 allows to browse [Triple Pattern Fragments](http://data.linkeddatafragments.org/dbpedia?subject=&predicate=rdf%3Atype&object=dbpedia-owl%3ARestaurant).
-<br>
-More complex clients,
-such as our [Triple Pattern Fragments client](/software/)
-perform more complicated tasks,
-like answering SPARQL queries using only Triple Pattern Fragments.
+More complex clients, such as [Triple Pattern Fragments clients](/software/),
+perform more complicated tasks like answering SPARQL queries.
 
 ## How do _Triple Pattern Fragments_ differ from SPARQL results? {#sparql}
-First of all, results of SPARQL CONSTRUCT queries are Linked Data Fragments,
+First of all, results of SPARQL queries are Linked Data Fragments,
 because they represent a fragment of the underlying dataset.
 However, they are not _Triple Pattern Fragments_,
 because those have a single _triple pattern_ as selector,
@@ -172,27 +169,12 @@ Most importantly, Linked Data Fragments and Linked Data Platform are **orthogona
 a server can offer Triple Pattern Fragments,
 while also implementing the Linked Data Platform read-write interface.
 
-## How will _Linked Data Fragments_ evolve? {#evolve}
-At the moment, we have proposed Triple Pattern Fragments,
-accompanied by a [server](/software/#server) and [client](/software/#client) implementation.
-They already indicate that querying with such fragments is a viable strategy.
-
-In the future, we plan to implement an iterator-based version of the client,
-and explore other fragment types.
-This will further improve performance,
-while maintaining high availability on the server side.
-
 ## Who is working on _Linked Data Fragments_? {#who}
-_Linked Data Fragments_ is an ongoing project at
+_Linked Data Fragments_ was started at
 [Multimedia Lab](http://multimedialab.elis.ugent.be/),
 [Ghent University](http://www.ugent.be/) –
-[iMinds](http://www.iminds.be/).
-<br>
-[Ruben Verborgh](http://ruben.verborgh.org),
-[Miel Vander Sande](https://twitter.com/Miel_vds),
-and [Pieter Colpaert](http://pieter.pm/)
-are currently involved.
-
+[iMinds](http://www.iminds.be/),
+and is currently being picked up [by several others](https://scholar.google.com/scholar?q="Linked+Data+Fragments").
 [Contact us](mailto:ruben.verborgh@ugent.be?subject=Linked%20Data%20Fragments)
 to find out more,
 or to collaborate on something nice!
