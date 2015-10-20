@@ -4,7 +4,7 @@ order: 3
 ---
 
 ## Linked Data Fragments: a uniform view on all Linked Data interfaces
-Today's Web has three common ways in which we access Linked Data:
+Today's Web offers three common ways to access Linked Data:
 
 - A **data dump** contains all triples in an entire dataset
   _([example](http://downloads.dbpedia.org/3.9/en/))_.
@@ -13,13 +13,10 @@ Today's Web has three common ways in which we access Linked Data:
 - A **SPARQL result** contains triples that correspond to a [SPARQL CONSTRUCT](http://www.w3.org/TR/sparql11-query/#construct) query
   _([example](http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=CONSTRUCT+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D%0D%0AWHERE+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D&format=text%2Fturtle))_.
 
-Instead of considering these three options in isolation,
-we want to provide a uniform view on them.
-
-Therefore, we call each subset of a Linked Data collection
-a [**Linked Data Fragment**](/in-depth/#ldf) (LDF).
+Linked Data Fragments is a conceptual framework that provides a uniform view on all possible interfaces to RDF,
+by observing that each interface partitions a dataset into its own specific kind of _fragments_.
 <br>
-Each fragment is characterized
+A [**Linked Data Fragment**](/in-depth/#ldf) (LDF) is characterized
 by a specific **selector** _(subject URI, SPARQL query, …)_,
 **metadata** _(variable names, counts, …)_,
 and **controls** _(links or URIs to other fragments)_.
@@ -67,8 +64,8 @@ allows us to visualize different HTTP interfaces for Linked Data _together_.
 
 **SPARQL endpoints** are easy for clients,
 as they allow highly specific fragment selection.
-However, they also use most server resources
-and thus have a [low availability](http://sw.deri.org/~aidanh/docs/epmonitorISWC.pdf).
+However, they also have the highest server cost
+which makes it expensive to host them with [decent availability](http://sw.deri.org/~aidanh/docs/epmonitorISWC.pdf).
 If you don't want to depend on such an endpoint,
 you download a **data dump**,
 but then you're querying a local source instead of the Web.
@@ -97,6 +94,6 @@ It consists of:
 
 Servers that offer such fragments are called
 [**_Triple Pattern Fragments_ servers**](/software/#server).
-
-A [**_Triple Pattern Fragments_ client**](/software/#client)
+<br>
+[**_Triple Pattern Fragments_ clients**](/software/#client)
 can solve many SPARQL queries efficiently.
