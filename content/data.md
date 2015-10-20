@@ -3,31 +3,20 @@ title: Data
 order: 4
 ---
 
-## Access datasets as Linked Data Fragments
+## Access datasets as Triple Pattern Fragments
 [Triple Pattern Fragments](/concept/#tpf)
 provide triple-pattern-based access to a dataset.
-<br>
 This enables **client-side querying** of live data with **high availability** at **low cost**.
-<br>
-You can freely access the datasets below as Triple Pattern Fragments.
+You can access the datasets below as Triple Pattern Fragments,
+and even perform [federated querying](http://client.linkeddatafragments.org/#datasources=http%3A%2F%2Ffragments.dbpedia.org%2F2014%2Fen;http%3A%2F%2Fdata.linkeddatafragments.org%2Fviaf;http%3A%2F%2Fdata.linkeddatafragments.org%2Fharvard&query=SELECT%20%3Fperson%20%3Fname%20%3Fbook%20%3Ftitle%20%7B%0A%20%20%20%20%3Fperson%20dc%3Asubject%20dbpedia%3ACategory%3ASwedish_Nobel_laureates.%0A%20%20%20%20%3FviafID%20schema%3AsameAs%20%3Fperson%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20schema%3Aname%20%3Fname.%0A%20%20%20%20%3Fbook%20dc%3Acontributor%20%5B%20foaf%3Aname%20%3Fname%20%5D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20dc%3Atitle%20%3Ftitle.%0A%7D) over them.
 
 ### Triple Pattern Fragments hosted by [DBpedia](http://fragments.dbpedia.org/)
   - **[DBpedia](http://fragments.dbpedia.org/2014/en)**, the Linked Data version of Wikipedia
     _([query these fragments](http://fragments.dbpedia.org/))_
 
-### Triple Pattern Fragments hosted for [Wikidata](http://www.wikidata.org/)
-  - **[Wikidata](http://wikidataldf.com/)**,
-    a free linked database for humans and machines
-    _([query these fragments](http://client.wikidataldf.com/))_
-
 ### Triple Pattern Fragments hosted by [LOD Laundromat](http://fragments.dbpedia.org/)
   - **[Dataset index](http://lodlaundromat.org/wardrobe/)**,
     more than 650,000 datasets from across the Web.
-
-### Triple Pattern Fragments hosted by [KBOdata](http://kbodata.be/)
-
-  - **[Belgian Crossroads Bank for Enterprises](http://data.kbodata.be/fragments)**
-    _([query these fragments](http://client.linkeddatafragments.org/#startFragment=http%3A%2F%2Fdata.kbodata.be%2Ffragments))_
 
 ### Triple Pattern Fragments hosted for [DataSalon](http://www.datasalon.com/)
   - **[OrgRef](http://ldf-vivo.herokuapp.com/orgref)**,
@@ -65,10 +54,9 @@ and execute your own queries!
 
 ## Publish your own Triple Pattern Fragments
 **You can host your dataset** in a queryable way at low cost and with high availability
-using [a free LDF server](/software/#server).
+using [a free server](/software/#server).
 <br>
-Deploy your own server easily
-on top of an existing SPARQL endpoint.
+Deploy your own server easily on top of an existing dataset.
 [Download your server.](/software/#server)
 
 **Do you already publish Triple Pattern Fragments?**
