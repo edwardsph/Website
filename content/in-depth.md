@@ -39,7 +39,7 @@ formally captures this concept.
 ## What is a _Triple Pattern Fragment_? {#tpf}
 A **Triple Pattern Fragment** is a Linked Data Fragment
 with a **triple pattern** as selector, **count** metadata,
-and controls to **retrieve any other triple pattern fragment** of the same dataset,
+and controls to **retrieve any other Triple Pattern Fragment** of the same dataset,
 in particular other fragments the matching elements belong to.
 Fragments are _paged_ to contain only a part of the data.
 

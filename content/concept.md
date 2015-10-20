@@ -58,7 +58,7 @@ allows us to visualize different HTTP interfaces for Linked Data _together_.
   <line x1="85%" x2="85%" y1="69" y2="80" />
   <text  x="7%"   y="95"  class="label">data dump</text>
   <text  x="22%"  y="95"  class="label">subject page</text>
-  <text  x="43%"  y="95"  class="label"><a xlink:href="#tpf">triple pattern fragment</a></text>
+  <text  x="43%"  y="95"  class="label"><a xlink:href="#tpf">Triple Pattern Fragment</a></text>
   <text  x="85%"  y="95"  class="label">SPARQL query result</text>
 </svg>
 

@@ -11,7 +11,7 @@ using any of these [client](#client) or [server](#server) implementations.
 These clients execute SPARQL queries
 using [Triple Pattern Fragments](/concept/#tpf).
 <br>
-This way, servers only need to publish triple pattern fragments of a dataset,
+This way, servers only need to publish Triple Pattern Fragments of a dataset,
 <br>
 providing a **scalable yet efficient** way to query Linked Data.
 
