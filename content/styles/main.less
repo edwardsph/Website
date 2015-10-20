@@ -138,48 +138,46 @@ svg {
   a {
     fill: @accent;
   }
+  .label {
+    font-weight: bold;
+  }
+  text {
+    text-anchor: middle;
+    &.accent {
+      font-weight: bold;
+      fill: @accent;
+    }
+  }
+  .left {
+    text-anchor: start;
+  }
   .right {
     text-anchor: end;
   }
-  .label {
-    text-anchor: middle;
-    font-weight: bold;
-  }
   line {
     stroke: black;
+    &.accent {
+      stroke: @accent;
+      stroke-width: 2px;
+    }
   }
 }
 
 body.home {
   main {
-    font-size: 1.2em;
-
-    p {
-      margin: 2em 0;
-      &.story {
-        margin: 4em 0;
-      }
+    a {
+      font-weight: bold;
     }
-  }
 
-  img.aside {
-    float: right;
-    height: 7.2em;
-  }
-}
-
-.screenshot {
-  img {
-    width: 190px;
-    float: right;
-    border: 1px solid #aaa;
-    margin-left: 20px;
+    svg {
+      margin: 1.5em 0 .7em;
+    }
   }
 }
 
 #billboard {
   text-align: center;
-  margin-bottom: 4em;
+  margin: -1em 0 2em;
 
   h1 {
     display: none;
@@ -211,6 +209,23 @@ body.home {
   }
 }
 
+.screenshot {
+  img {
+    width: 190px;
+    float: right;
+    border: 1px solid #aaa;
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: 800px) {
+  body.home {
+    main {
+      font-size: 1.2em;
+    }
+  }
+}
+
 @media (max-width: 800px) {
   // Display menu on two lines
   nav {
@@ -225,7 +240,7 @@ body.home {
 
   // ensure labels don't overlap
   svg {
-    .label:nth-child(odd) {
+    &.alternate .label:nth-child(odd) {
       baseline-shift: -1em;
     }
   }
@@ -237,19 +252,6 @@ body.home {
         width: 100%;
         margin-bottom: -0.5em;
       }
-    }
-  }
-
-  body.home {
-    main {
-      text-align: center;
-    }
-
-    img.aside {
-      float: none;
-      display: block;
-      margin: 0 auto .5em;
-      height: 8em;
     }
   }
 }
@@ -266,11 +268,12 @@ body.home {
   }
 
   nav {
-    margin: 0 0 10px;
+    margin: -5px -10px 10px;
     ul {
       padding: 0px;
+      font-size: .9em;
       li {
-        padding: 5px 10px;
+        padding: 5px 6px;
       }
     }
   }
@@ -287,7 +290,7 @@ body.home {
 
   #billboard {
     .slogan {
-      font-size: 1em;
+      font-size: 1.3em;
       img {
         width: 50%;
         margin-bottom: -0.5em;

@@ -33,7 +33,7 @@ in order to optimize the balance between server and client effort.
 The Linked Data Fragments vision
 allows us to visualize different HTTP interfaces for Linked Data _together_.
 
-<svg height="115">
+<svg height="115" class="alternate">
   <marker id="rightArrow" markerWidth="10" markerHeight="10" refx="10" refy="5">
     <polyline points="0,0 10,5 0,10"  fill="none" stroke="black" />
   </marker>
@@ -44,22 +44,22 @@ allows us to visualize different HTTP interfaces for Linked Data _together_.
   <line x1="0" y1="74" x2="100%" y2="74"
         style="marker-start: url(#leftArrow); marker-end: url(#rightArrow);"/>
 
-  <text x="0.5%" y="25" class="caption">fully local querying</text>
-  <text x="0.5%" y="42" class="caption">maximal data availability</text>
-  <text x="0.5%" y="59" class="caption">high processing by the client</text>
+  <text x="0.5%" y="25" class="caption left">high client cost</text>
+  <text x="0.5%" y="42" class="caption left">high availability</text>
+  <text x="0.5%" y="59" class="caption left">high bandwidth</text>
 
-  <text x="99.5%" y="25" class="caption right">fully remote querying</text>
-  <text x="99.5%" y="42" class="caption right">minimal data availability</text>
-  <text x="99.5%" y="59" class="caption right">high processing by the server</text>
+  <text x="99.5%" y="25" class="caption right">high server cost</text>
+  <text x="99.5%" y="42" class="caption right">low availability</text>
+  <text x="99.5%" y="59" class="caption right">low bandwidth</text>
 
   <line x1="5%"  x2="5%"  y1="69" y2="80" />
   <line x1="20%" x2="20%" y1="69" y2="80" />
   <line x1="43%" x2="43%" y1="69" y2="80" />
-  <line x1="85%" x2="85%" y1="69" y2="80" />
-  <text  x="7%"   y="95"  class="label">data dump</text>
+  <line x1="95%" x2="95%" y1="69" y2="80" />
+  <text  x="2%"   y="95"  class="label left">data dump</text>
   <text  x="22%"  y="95"  class="label">subject page</text>
   <text  x="43%"  y="95"  class="label"><a xlink:href="#tpf">Triple Pattern Fragment</a></text>
-  <text  x="85%"  y="95"  class="label">SPARQL query result</text>
+  <text  x="98%"  y="95"  class="label right">SPARQL query result</text>
 </svg>
 
 **SPARQL endpoints** are easy for clients,
