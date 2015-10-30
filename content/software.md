@@ -30,7 +30,7 @@ Java
 : [Client.java](https://github.com/LinkedDataFragments/Client.Java) prototype client for Jena
 
 Python
-: _coming soon_
+: [Hydra library for Python](https://github.com/pchampin/hydra-py)
 
 ## Host a server of Triple Pattern Fragments {#server}
 
