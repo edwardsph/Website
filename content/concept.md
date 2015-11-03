@@ -11,7 +11,7 @@ Today's Web offers three common ways to access Linked Data:
 - A **subject page** contains triples about a specific subject in a dataset
   _([example](http://dbpedia.org/page/Linked_data))_.
 - A **SPARQL result** contains triples that correspond to a [SPARQL CONSTRUCT](http://www.w3.org/TR/sparql11-query/#construct) query
-  _([example](http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=CONSTRUCT+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D%0D%0AWHERE+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D&format=text%2Fturtle))_.
+  _([example](http://dbpedia.org/sparql?query=PREFIX+dbpedia-owl%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0A%0D%0ACONSTRUCT+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D%0D%0AWHERE+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D&format=text%2Fturtle))_.
 
 Linked Data Fragments is a conceptual framework that provides a uniform view on all possible interfaces to RDF,
 by observing that each interface partitions a dataset into its own specific kind of _fragments_.
