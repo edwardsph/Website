@@ -2,3 +2,4 @@ output
 tmp
 *.log
 COMPRESS
+Gemfile.lock
