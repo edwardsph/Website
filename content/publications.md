@@ -4,12 +4,23 @@ order: 100
 ---
 
 ## Foundations
+General reference for Linked Data Fragments and Triple Pattern Fragments:
+
+- **[Triple Pattern Fragments: a Low-cost Knowledge Graph Interface for the Web](/publications/jws2016.pdf)**
+  <br>
+  explains Linked Data Fragments, Triple Pattern Fragments,
+  and experimentally verifies their performance
+  in single-source and federated scenarios.
+  ([Abstract](http://ruben.verborgh.org/publications/verborgh_jws_2016/) –
+   [PDF](/publications/jws2016.pdf) –
+   [BibTeX](http://ruben.verborgh.org/publications/verborgh_jws_2016/verborgh_jws_2016.bib))
+  <br>
+  _2016, [Journal of Web Semantics](http://www.journals.elsevier.com/journal-of-web-semantics/)._
+
+The above journal article is based on these papers:
 
 - **[Querying Datasets on the Web with High Availability](/publications/iswc2014.pdf)**
   <br>
-  introduces Linked Data Fragments and Triple Pattern Fragments,
-  and experimentally verifies their scalability.
-  General reference for Linked Data Fragments.
   ([Abstract](http://ruben.verborgh.org/publications/verborgh_iswc_2014/) –
    [PDF](/publications/iswc2014.pdf) –
    [BibTeX](http://ruben.verborgh.org/publications/verborgh_iswc_2014/verborgh_iswc_2014.bib))
@@ -18,7 +29,6 @@ order: 100
 
 - **[Web-Scale Querying through Linked Data Fragments](/publications/ldow2014.pdf)**
   <br>
-  explained Linked Data Fragments for the first time
   ([Abstract](http://ruben.verborgh.org/publications/verborgh_ldow_2014/) –
    [PDF](/publications/ldow2014.pdf) –
    [BibTeX](http://ruben.verborgh.org/publications/verborgh_ldow_2014/verborgh_ldow_2014.bib))
