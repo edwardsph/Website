@@ -1,4 +1,4 @@
-class NanocExternalizeLinks < Nanoc3::Filter
+class NanocExternalizeLinks < Nanoc::Filter
   identifier :externalize_links
 
   def run(content, params = {})

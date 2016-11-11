@@ -10,9 +10,12 @@ prune:
   auto_prune: false
   exclude: [ '.git' ]
 
+string_pattern_type: legacy
+
 data_sources:
   -
-    type: filesystem_unified
+    type: filesystem
+    identifier_type: legacy
     items_root: /
     layouts_root: /
     allow_periods_in_identifiers: false

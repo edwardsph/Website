@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'nanoc', '~> 3.0'
+gem 'nanoc', '~> 4.0'
 gem 'kramdown'
 gem 'less'
 gem 'therubyracer' # for Less
