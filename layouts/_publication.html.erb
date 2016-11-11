@@ -1,0 +1,28 @@
+<li class="publication">
+  <span class="title">
+    <% if @publication[:url] %>
+      <a href="<%= h @publication[:url].to_s %>"><%= h @publication[:title].to_s %></a>
+    <% else %>
+      <%= h @publication[:title].to_s %>
+    <% end %>
+  </span>
+  <span class="authors">
+    <%= authors_of @publication %>
+  </span>
+  <span class="venue">
+    <%= h (@publication[:booktitle] || @publication[:journal]).to_s %>
+  </span>
+  <span class="year">(<%= @publication[:year] %>)</span>
+  <ul class="links">
+    <li><a href="<%= h @publication.path %>">BibTeX</a></li>
+    <% if @publication[:url] %>
+      <li><a href="<%= h @publication[:url].to_s %>">full text</a></li>
+    <% end %>
+  </ul>
+  <% if @publication[:topic] then %>
+    <span class="topic">
+      <strong>Topic:</strong>
+      <%= @publication[:topic] %>
+    </span>
+  <% end %>
+</li>

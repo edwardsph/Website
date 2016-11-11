@@ -218,6 +218,46 @@ body.home {
   }
 }
 
+.publication {
+  margin: 0 0 1em;
+
+  .title {
+    font-weight: bold;
+    display: block;
+  }
+
+  .authors {
+    display: block;
+    font-style: italic;
+  }
+
+  > *:not(.title) {
+    font-size: .9em;
+  }
+
+  .links {
+    float: right;
+
+    > li {
+      display: inline;
+      padding: 0;
+
+      &:before {
+        content: ' – ';
+        position: static;
+        margin: 0;
+      }
+      &:first-child:before {
+        content: '';
+      }
+    }
+  }
+
+  .topic {
+    display: block;
+  }
+}
+
 @media (min-width: 800px) {
   body.home {
     main {

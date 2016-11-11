@@ -19,3 +19,13 @@ data_sources:
     items_root: /
     layouts_root: /
     allow_periods_in_identifiers: false
+  -
+    type: bibtex
+    items_root: /publications
+    config:
+      path: assets/publications/
+      exclude:
+        - abstract
+        - month_numeric
+        - kind
+        - topic

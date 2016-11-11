@@ -2,15 +2,26 @@
 
 compress = File.exists? 'COMPRESS'
 
+# Stylesheets
 compile '/styles/*' do
   filter :less
   filter :rainpress if compress
 end
-
 route '/styles/*' do
   item.identifier.without_ext + '.css'
 end
 
+# Publications
+compile '/publications/*' do
+end
+route '/publications/*.pdf' do
+  item.identifier.to_s
+end
+route '/publications/*' do
+  item.identifier.without_ext + '.bib'
+end
+
+# All other files
 compile '/**/*' do
   unless item.binary?
     filter :erb
@@ -20,7 +31,6 @@ compile '/**/*' do
     filter :html5small if compress
   end
 end
-
 route '/**/*' do
   if item.binary?
     item.identifier.to_s
