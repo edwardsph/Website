@@ -10,12 +10,12 @@ prune:
   auto_prune: false
   exclude: [ '.git' ]
 
-string_pattern_type: legacy
+string_pattern_type: glob
 
 data_sources:
   -
     type: filesystem
-    identifier_type: legacy
+    identifier_type: full
     items_root: /
     layouts_root: /
     allow_periods_in_identifiers: false

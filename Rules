@@ -7,26 +7,26 @@ compile '/styles/*' do
   filter :rainpress if compress
 end
 
-compile '*' do
+route '/styles/*' do
+  item.identifier.without_ext + '.css'
+end
+
+compile '/**/*' do
   unless item.binary?
     filter :erb
     filter :kramdown
-    layout 'default'
+    layout '/default.*'
     filter :externalize_links
     filter :html5small if compress
   end
 end
 
-route '/styles/*' do
-  item.identifier.chop + '.css'
-end
-
-route '*' do
+route '/**/*' do
   if item.binary?
-    item.identifier.chop + '.' + item[:extension]
+    item.identifier.to_s
   else
-    item.identifier + 'index.html'
+    item.identifier.without_ext + '/index.html'
   end
 end
 
-layout '*', :erb
+layout '/**/*', :erb
