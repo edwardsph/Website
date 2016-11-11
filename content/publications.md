@@ -42,3 +42,8 @@ the Triple Pattern Fragments interface.
   <%= render_publication 'verborgh_eswc_2015' %>
   <%= render_publication 'verborgh_usewod_2015' %>
 </ul>
+
+## Caching
+<ul>
+  <%= render_publication 'folz_eswc_2016' %>
+</ul>
