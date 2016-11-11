@@ -28,6 +28,7 @@ the Triple Pattern Fragments interface.
 
 ## Query algorithm optimizations
 <ul>
+  <%= render_publication 'acosta_iswc_2015' %>
   <%= render_publication 'vanherwegen_eswc_2015' %>
 </ul>
 
