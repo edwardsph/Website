@@ -7,7 +7,7 @@ index_filenames: [ 'index.html' ]
 enable_output_diff: false
 
 prune:
-  auto_prune: false
+  auto_prune: true
   exclude: [ '.git' ]
 
 string_pattern_type: glob
