@@ -24,12 +24,22 @@ the Triple Pattern Fragments interface.
 <ul>
   <%= render_publication 'vandersande_iswc_2015' %>
   <%= render_publication 'vanherwegen_iswc_2015' %>
+  <%= render_publication 'taelman_cold_2016' %>
+  <%= render_publication 'colpaert_iswc_2015' %>
+  <%= render_publication 'colpaert_cold_2016' %>
 </ul>
 
 ## Query algorithm optimizations
 <ul>
   <%= render_publication 'acosta_iswc_2015' %>
   <%= render_publication 'vanherwegen_eswc_2015' %>
+</ul>
+
+## Federated query execution
+<ul>
+  <%= render_publication 'verborgh_jws_2016' %>
+  <%= render_publication 'vandersande_ijswis_2016' %>
+  <%= render_publication 'hochstenbach_elag_2015' %>
 </ul>
 
 ## Applications of Linked Data Fragments technologies
@@ -46,4 +56,14 @@ the Triple Pattern Fragments interface.
 ## Caching
 <ul>
   <%= render_publication 'folz_eswc_2016' %>
+</ul>
+
+## Streaming Linked Data
+<ul>
+  <%= render_publication 'taelman_mepdaw_2016' %>
+</ul>
+
+## Versioned Linked Data
+<ul>
+  <%= render_publication 'taelman_ekaw_2016' %>
 </ul>
