@@ -20,5 +20,5 @@ def authors_of publication
 end
 
 def fullname_of author
-  id = "#{author.first[0]}. #{author.prefix} #{author.last} #{author.suffix}".strip.gsub(/\s+/, ' ')
+  id = "#{author.first.gsub /[a-z]+/, '.'} #{author.prefix} #{author.last} #{author.suffix}".strip.gsub(/\s+/, ' ')
 end
