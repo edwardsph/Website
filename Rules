@@ -21,6 +21,11 @@ route '/publications/*' do
   item.identifier.without_ext + '.bib'
 end
 
+# Index
+route '/index.*' do
+  '/index.html'
+end
+
 # All other files
 compile '/**/*' do
   unless item.binary?
