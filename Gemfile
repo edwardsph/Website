@@ -15,3 +15,12 @@ gem 'i18n'
 gem 'html5small'
 gem 'rainpress'
 gem 'uglifier'
+
+group :development do
+  # live view
+  gem 'guard-nanoc'
+  gem 'guard-process'
+  gem 'guard-livereload'
+  gem 'serve'
+  gem 'rack-livereload'
+end
