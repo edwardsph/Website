@@ -170,11 +170,5 @@ a server can offer Triple Pattern Fragments,
 while also implementing the Linked Data Platform read-write interface.
 
 ## Who is working on _Linked Data Fragments_? {#who}
-_Linked Data Fragments_ was started at
-[Multimedia Lab](http://multimedialab.elis.ugent.be/),
-[Ghent University](http://www.ugent.be/) –
-[iMinds](http://www.iminds.be/),
-and is currently being picked up [by several others](https://scholar.google.com/scholar?q="Linked+Data+Fragments").
-[Contact us](mailto:ruben.verborgh@ugent.be?subject=Linked%20Data%20Fragments)
-to find out more,
-or to collaborate on something nice!
+The following people have [published](/publications/) work on Linked Data Fragments:
+<em><%= h all_authors.join(', ') %></em>.
