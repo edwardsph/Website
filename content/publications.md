@@ -22,6 +22,7 @@ These papers discuss interface features that extend beyond
 the Triple Pattern Fragments interface.
 
 <ul>
+  <%= render_publication 'hartig_odbase_2016' %>
   <%= render_publication 'vandersande_iswc_2015' %>
   <%= render_publication 'vanherwegen_iswc_2015' %>
   <%= render_publication 'taelman_cold_2016' %>
