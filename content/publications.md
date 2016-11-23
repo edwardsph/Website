@@ -61,6 +61,7 @@ the Triple Pattern Fragments interface.
 
 ## Streaming Linked Data
 <ul>
+  <%= render_publication 'taelman_mepdaw_bp_2016' %>
   <%= render_publication 'taelman_mepdaw_2016' %>
 </ul>
 
