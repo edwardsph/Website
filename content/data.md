@@ -14,6 +14,10 @@ and even perform [federated querying](http://client.linkeddatafragments.org/#dat
   - **[DBpedia](http://fragments.dbpedia.org/2014/en)**, the Linked Data version of Wikipedia
     _([query these fragments](http://fragments.dbpedia.org/))_
 
+### Triple Pattern Fragments hosted by [Wikidata](https://www.wikidata.org/)
+  - **[Wikidata](https://query.wikidata.org/bigdata/ldf)**, the free knowledge base
+    _([query these fragments](http://ldfclient.wmflabs.org/))_
+
 ### Triple Pattern Fragments hosted by [LOD Laundromat](http://lodlaundromat.org/wardrobe/)
   - **[Dataset index](http://lodlaundromat.org/wardrobe/)**,
     more than 650,000 datasets from across the Web.
