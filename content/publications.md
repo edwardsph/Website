@@ -45,6 +45,7 @@ the Triple Pattern Fragments interface.
 
 ## Applications of Linked Data Fragments technologies
 <ul>
+  <%= render_publication 'vandersande_jod_2017' %>
   <%= render_publication 'rietveld_eswc_2015' %>
 </ul>
 
