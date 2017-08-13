@@ -70,3 +70,8 @@ the Triple Pattern Fragments interface.
 <ul>
   <%= render_publication 'taelman_ekaw_2016' %>
 </ul>
+
+## Formal foundations and studies
+<ul>
+  <%= render_publication 'hartig_iswc_2017' %>
+</ul>
