@@ -69,6 +69,8 @@ the Triple Pattern Fragments interface.
 
 ## Versioned Linked Data
 <ul>
+  <%= render_publication 'taelman_mepdaw_2017' %>
+  <%= render_publication 'taelman_eswc_demo_2017' %>
   <%= render_publication 'taelman_ekaw_2016' %>
 </ul>
 
