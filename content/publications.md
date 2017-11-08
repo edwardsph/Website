@@ -47,6 +47,7 @@ the Triple Pattern Fragments interface.
 <ul>
   <%= render_publication 'vandersande_jod_2017' %>
   <%= render_publication 'rietveld_eswc_2015' %>
+  <%= render_publication 'moreau_iswc_2017' %>
 </ul>
 
 ## Analysis and usage
