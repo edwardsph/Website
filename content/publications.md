@@ -47,6 +47,7 @@ the Triple Pattern Fragments interface.
 <ul>
   <%= render_publication 'vandersande_jod_2017' %>
   <%= render_publication 'rietveld_eswc_2015' %>
+  <%= render_publication 'moreau_iswc_2017' %>
 </ul>
 
 ## Analysis and usage
@@ -68,6 +69,8 @@ the Triple Pattern Fragments interface.
 
 ## Versioned Linked Data
 <ul>
+  <%= render_publication 'taelman_mepdaw_2017' %>
+  <%= render_publication 'taelman_eswc_demo_2017' %>
   <%= render_publication 'taelman_ekaw_2016' %>
 </ul>
 

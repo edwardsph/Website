@@ -382,3 +382,39 @@ Our results show that this solution makes real-time querying more scalable for a
   abstract = {The Linked Data Fragment (LDF) framework has been proposed as a uniform view to explore the trade-offs of consuming Linked Data when servers provide (possibly many) different interfaces to access their data. Every such interface has its own particular properties regarding performance, bandwidth needs, caching, etc. Several practical challenges arise. For example, before exposing a new type of LDFs in some server, can we formally say something about how this new LDF interface compares to other interfaces previously implemented in the same server? From the client side, given a client with some restricted capabilities in terms of time constraints, network connection, or computational power, which is the best type of LDFs to complete a given task? Today there are only a few formal theoretical tools to help answer these and other practical questions, and researchers have embarked in solving them mainly by experimentation. In this paper we propose the Linked Data Fragment Machine (LDFM) which is the first formalization to model LDF scenarios. LDFMs work as classical Turing Machines with extra features that model the server and client capabilities. By proving formal results based on LDFMs, we draw a fairly complete expressiveness lattice that shows the interplay between several combinations of client and server capabilities. We also show the usefulness of our model to formally analyze the fine-grain interplay between several metrics such as the number of requests sent to the server, and the bandwidth of communication between client and server.},
   url = {http://olafhartig.de/files/HartigEtAl_ISWC2017_Preprint.pdf},
 }
+
+@inproceedings{moreau_iswc_2017,
+  title = {Querying non-RDF Datasets using Triple Patterns},
+  author = {Moreau, Benjamin and Serrano-Alvarado, Patricia and Desmontils, Emmanuel and Thoumas, David},
+  booktitle = {Proceedings of the 16th International Semantic Web Conference: Posters and Demos},
+  year = 2017,
+  month = oct,
+  abstract = {Triple Pattern Fragments (TPF) interface allows to query
+Linked Data datasets with high data availability. But, data providers do
+not integrate large amounts of datasets as Linked Data due to expensive
+investments in terms of storage and maintenance. The problem we focus
+on is how to integrate non-RDF datasets on-demand as Linked Data
+simply and efficiently. In this demo, we present ODMTP, an On-Demand
+Mapping using Triple Patterns over non-RDF datasets. ODMTP is implemented
+over a TPF server. We showcase it with SPARQL queries over
+Twitter.},
+  url = {https://iswc2017.semanticweb.org/wp-content/uploads/papers/PostersDemos/paper530.pdf},
+}
+
+@inproceedings{taelman_mepdaw_2017,
+  title = {Versioned Triple Pattern Fragments: A Low-cost {Linked} {Data} Interface Feature for {Web} Archives},
+  author = {Taelman, Ruben and Vander Sande, Miel and Verborgh, Ruben and Mannens, Erik},
+  booktitle = {Proceedings of the 3rd Workshop on Managing the Evolution and Preservation of the Data Web},
+  year = {2017},
+  month = may,
+  url = {http://rubensworks.net/raw/publications/2017/vtpf.pdf}
+}
+
+@inproceedings{taelman_eswc_demo_2017,
+  author = {Taelman, Ruben and Vander Sande, Miel and Verborgh, Ruben and Mannens, Erik},
+  title = {Live Storage and Querying of Versioned Datasets on the {Web}},
+  booktitle = {Proceedings of the 14th Extended Semantic Web Conference: Posters and Demos},
+  year = {2017},
+  month = may,
+  url = {http://rubensworks.net/raw/publications/2017/vtpf-demo.pdf}
+}
