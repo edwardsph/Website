@@ -17,6 +17,7 @@ providing a **scalable yet efficient** way to query Linked Data.
 
 JavaScript
 : [**Try the online demo in your browser**](http://client.linkeddatafragments.org/)
+: [Comunica](http://comunica.linkeddatafragments.org/) for Node.js and the browser
 : [Client.js](https://github.com/LinkedDataFragments/Client.js) for Node.js and the browser
 : [jQuery Widget](https://github.com/LinkedDataFragments/jQuery-Widget.js) for the browser
 : [&lt;ldf-client&gt;](https://github.com/tomayac/ldf-client) Polymer client
