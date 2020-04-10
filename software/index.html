@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Linked Data Fragments | Software</title>
+  <link rel="stylesheet" href="/styles/main.css">
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400italic,700italic,400,700' rel='stylesheet'>
+  <meta name="viewport" content="initial-scale=1">
+</head>
+<body class="software">
+  <nav>
+    <p><a href="/">Linked Data Fragments</a></p><ul>
+      <li><a href="/concept/">Concept</a></li><li><a href="/data/">Data</a></li><li class="active"><a href="/software/">Software</a></li><li><a href="/in-depth/">In depth</a></li><li><a href="/specification/">Specification</a></li><li><a href="/publications/">Publications</a></li>
+        <li class="new"><a href="http://comunica.linkeddatafragments.org/" target="_blank">Comunica</a></li>
+    </ul>
+  </nav>
+  <main>
+    
+      <h1>Software</h1>
+    
+    
+    
+    <p>Query and publish Triple Pattern Fragments
+using any of these <a href="#client">client</a> or <a href="#server">server</a> implementations.</p>
+
+<h2 id="client">Use a client of Triple Pattern Fragments</h2>
+
+<p><a href="http://client.linkeddatafragments.org/" target="_blank" class="screenshot"><img src="/images/client.png" alt="" /></a>
+These clients execute SPARQL queries
+using <a href="/concept/#tpf">Triple Pattern Fragments</a>.
+<br />
+This way, servers only need to publish Triple Pattern Fragments of a dataset,
+<br />
+providing a <strong>scalable yet efficient</strong> way to query Linked Data.</p>
+
+<dl>
+  <dt>JavaScript</dt>
+  <dd><a href="http://comunica.linkeddatafragments.org/" target="_blank"><strong>Try the online demo in your browser</strong></a></dd>
+  <dd><a href="https://github.com/comunica/comunica/" target="_blank">Comunica</a> for Node.js and the browser</dd>
+  <dd><a href="https://github.com/comunica/jQuery-Widget.js" target="_blank">jQuery Widget</a> for the browser</dd>
+  <dd><a href="https://github.com/LinkedDataFragments/Client.js" target="_blank">Client.js</a> for Node.js and the browser (<em>deprecated in favor of Comunica</em>)</dd>
+  <dd><a href="https://github.com/tomayac/ldf-client" target="_blank">&lt;ldf-client&gt;</a> Polymer client</dd>
+  <dt>Perl</dt>
+  <dd><a href="https://metacpan.org/pod/RDF::Trine::Store::LDF" target="_blank">RDF::Trine::Store::LDF</a> RDF Store proxy for Trine</dd>
+  <dd><a href="https://metacpan.org/pod/AtteanX::Store::LDF" target="_blank">AtteanX::Store::LDF</a> RDF Store for Attean</dd>
+  <dd><a href="https://metacpan.org/pod/Catmandu::Importer::RDF" target="_blank">Catmandu::Importer::RDF</a> Importer for Catmandu</dd>
+  <dt>Java</dt>
+  <dd><a href="https://github.com/LinkedDataFragments/Client.Java" target="_blank">Client.java</a> prototype client for Jena</dd>
+  <dt>Python</dt>
+  <dd><a href="https://github.com/pchampin/hydra-py" target="_blank">Hydra library for Python</a></dd>
+  <dd><a href="https://github.com/benjimor/odmtp-tpf" target="_blank">On Demand Mapper with Triple pattern matching</a></dd>
+</dl>
+
+<h2 id="server">Host a server of Triple Pattern Fragments</h2>
+
+<p><a href="http://data.linkeddatafragments.org/" target="_blank" class="screenshot"><img src="/images/server.png" alt="" /></a>
+SPARQL endpoints and subject page servers offer Linked Data Fragments,
+<br />
+but <a href="/concept/#tpf">Triple Pattern Fragments</a>
+enable <strong>efficient client-side querying</strong>.</p>
+
+<dl>
+  <dt>JavaScript</dt>
+  <dd><a href="https://github.com/LinkedDataFragments/Server.js" target="_blank">Server.js</a> for Node.js</dd>
+  <dt>Python</dt>
+  <dd><a href="https://github.com/jermnelson/linked-data-fragments/tree/development" target="_blank">linked-data-fragments</a></dd>
+  <dt>Perl</dt>
+  <dd><a href="https://metacpan.org/pod/RDF::LinkedData" target="_blank">RDF::LinkedData</a></dd>
+  <dt>Ruby</dt>
+  <dd><a href="https://github.com/ActiveTriples/linked-data-fragments" target="_blank">Linked Data Fragments</a></dd>
+  <dt>PHP</dt>
+  <dd><a href="https://github.com/tdt/triples" target="_blank">The DataTank</a></dd>
+  <dt>Java</dt>
+  <dd><a href="https://github.com/LinkedDataFragments/Server.java" target="_blank">Server.java</a></dd>
+  <dt>NetKernel</dt>
+  <dd><a href="https://github.com/elephantbirdconsulting/netkernel-contribution/" target="_blank">NetKernel server</a></dd>
+</dl>
+
+<p>A Triple Pattern Fragments server
+functions in front of a SPARQL endpoint
+or on top of <a href="https://github.com/LinkedDataFragments/Server#supported-data-sources" target="_blank">other datasources</a>.</p>
+
+  </main>
+  <footer>
+    <p>
+      ©2013–2020
+      the Linked Data Fragments collaborators.
+      <strong><a href="mailto:ruben.verborgh@ugent.be?subject=Linked%20Data%20Fragments">Contact us</a>.</strong>
+    </p>
+  </footer>
+  <script>GoogleAnalyticsObject='ga';ga=function(){ga.q.push(arguments)};ga.q=[['create','UA-48816744-1','linkeddatafragments.org'],['send','pageview']];ga.l=1*new Date</script>
+  <script src="//www.google-analytics.com/analytics.js"></script>
+</body>
+</html>

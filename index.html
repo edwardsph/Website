@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Linked Data Fragments</title>
+  <link rel="stylesheet" href="/styles/main.css">
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400italic,700italic,400,700' rel='stylesheet'>
+  <meta name="viewport" content="initial-scale=1">
+</head>
+<body class="home">
+  <nav>
+    <p><a href="/">Linked Data Fragments</a></p><ul>
+      <li><a href="/concept/">Concept</a></li><li><a href="/data/">Data</a></li><li><a href="/software/">Software</a></li><li><a href="/in-depth/">In depth</a></li><li><a href="/specification/">Specification</a></li><li><a href="/publications/">Publications</a></li>
+        <li class="new"><a href="http://comunica.linkeddatafragments.org/" target="_blank">Comunica</a></li>
+    </ul>
+  </nav>
+  <main>
+    
+    
+    
+    <div id="billboard">
+  <h1 id="linked-data-fragments">Linked Data Fragments</h1>
+
+  <p class="slogan"><a href="/concept/"><img src="/images/logo.svg" alt="[Linked Data Fragments logo]" class="logo" />
+Query the Web of data on <em>Web-scale</em> by
+<br />
+moving intelligence from servers to clients.</a></p>
+  <p><a href="http://videolectures.net/iswc2014_verborgh_querying_datasets/" target="_blank" title="Ruben Verborgh at ISWC2014: Querying Datasets on the Web with High Availability">Watch this talk</a>
+to learn the foundations of Linked Data Fragments.</p>
+
+  <p>Try <a href="http://comunica.linkeddatafragments.org/" target="_blank">Comunica</a>, a new Web framework to query Linked Data Fragments.</p>
+</div>
+
+<p><strong>A huge amount of Linked Data is available on the Web.</strong>
+But can live applications use it?
+<br />
+<strong>SPARQL endpoints</strong> are expensive for the server, and not always available for all datasets.
+<br />
+<strong>Downloadable dumps</strong> are expensive for clients, and do not allow live querying on the Web.</p>
+
+<p>With <strong>Linked Data Fragments</strong>, and specifically the <strong>Triple Pattern Fragments</strong> interface,
+we aim to explore what happens when we redistribute the load between clients and servers.
+We then measure the impact of such interfaces on clients, servers, and caches.</p>
+
+<svg height="100">
+  <marker id="rightArrow" markerWidth="10" markerHeight="10" refx="10" refy="5">
+    <polyline points="0,0 10,5 0,10" fill="none" stroke="black" />
+  </marker>
+  <marker id="leftArrow" markerWidth="10" markerHeight="10" refx="0" refy="5">
+    <polyline points="10,0 0,5 10,10" fill="none" stroke="black" />
+  </marker>
+
+  <line x1="0" y1="74" x2="100%" y2="74" style="marker-start: url(#leftArrow); marker-end: url(#rightArrow);" />
+
+  <text x="0.5%" y="13" class="caption left">high client cost</text>
+  <text x="0.5%" y="36" class="caption left">high availability</text>
+  <text x="0.5%" y="59" class="caption left">high bandwidth</text>
+
+  <text x="99.5%" y="13" class="caption right">high server cost</text>
+  <text x="99.5%" y="36" class="caption right">low availability</text>
+  <text x="99.5%" y="59" class="caption right">low bandwidth</text>
+
+  <text x="50%" y="13" class="accent">Have we explored</text>
+  <text x="50%" y="36" class="accent">all options in-between?</text>
+
+  <line x1="5%" x2="5%" y1="69" y2="80" />
+  <line x1="30%" x2="30%" y1="69" y2="80" class="accent" />
+  <line x1="43%" x2="43%" y1="69" y2="80" class="accent" />
+  <line x1="51%" x2="51%" y1="69" y2="80" class="accent" />
+  <line x1="63%" x2="63%" y1="69" y2="80" class="accent" />
+  <line x1="73%" x2="73%" y1="69" y2="80" class="accent" />
+  <line x1="95%" x2="95%" y1="69" y2="80" />
+  <text x="2%" y="95" class="label left">data dump</text>
+  <text x="98%" y="95" class="label right">SPARQL endpoint</text>
+</svg>
+
+<p>Such solutions allow you to reliably <a href="http://client.linkeddatafragments.org/" target="_blank">execute queries against live Linked Data on the Web</a>.
+<br />
+You can even perform <a href="http://bit.ly/swedish-nobel-harvard" target="_blank">federated querying</a>—all in your browser.</p>
+
+<p>These are just a few examples of what the Semantic Web can become
+if we build intelligent <em>clients</em> instead of intelligent <em>servers</em>.
+<a href="/concept/">Learn more</a>.</p>
+
+<p>You can start publishing such lightweight Linked Data right now:
+<a href="/software/">install the server</a>.
+<br />
+Or view some of the 650,000+ datasets out there:
+<a href="/data/">browse datasets online</a>.
+<br />
+See how clients solve SPARQL queries on your data:
+<a href="http://comunica.linkeddatafragments.org/" target="_blank">try a Linked Data Fragments client</a>.</p>
+
+  </main>
+  <footer>
+    <p>
+      ©2013–2020
+      the Linked Data Fragments collaborators.
+      <strong><a href="mailto:ruben.verborgh@ugent.be?subject=Linked%20Data%20Fragments">Contact us</a>.</strong>
+    </p>
+  </footer>
+  <script>GoogleAnalyticsObject='ga';ga=function(){ga.q.push(arguments)};ga.q=[['create','UA-48816744-1','linkeddatafragments.org'],['send','pageview']];ga.l=1*new Date</script>
+  <script src="//www.google-analytics.com/analytics.js"></script>
+</body>
+</html>

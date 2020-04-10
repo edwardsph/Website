@@ -1,0 +1,56 @@
+@base <http://linkeddatafragments.org/description/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix prv: <http://purl.org/net/provenance/ns#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix doap: <http://usefulinc.com/ns/doap#>.
+@prefix assoc:   <http://ebiquity.umbc.edu/ontology/association.owl#>.
+@prefix project: <http://ebiquity.umbc.edu/ontology/project.owl#>.
+
+<> a foaf:Document;
+   foaf:primaryTopic <#ldf>;
+   foaf:maker <http://ruben.verborgh.org/#me>;
+   rdfs:label "Description of Linked Data Fragments";
+   prv:createdBy [ a prv:DataCreation;
+                   prv:performedBy <http://ruben.verborgh.org/#me> ].
+
+<#ldf> a project:Project, project:ActiveProject, foaf:Project;
+       rdfs:label    "Linked Data Fragments";
+       foaf:name     "Linked Data Fragments";
+       project:title "Linked Data Fragments";
+       project:description "The goal of Linked Data Fragments is to enable Linked Data querying on a Web scale."@en;
+       foaf:homepage <http://linkeddatafragments.org/>;
+       project:relatedResource <#ldf-client>;
+       project:relatedPublication <http://ruben.verborgh.org/publications/verborgh_ldow_2014/#publication>;
+       project:associatedWith [ assoc:project <#ldf-client>;
+                                assoc:person <http://ruben.verborgh.org/#me> ],
+                              [ assoc:project <#ldf-server>;
+                                assoc:person <http://ruben.verborgh.org/#me> ].
+
+<#ldf-client> a doap:Project;
+              rdfs:label "Triple Pattern Fragments client";
+              doap:name  "Triple Pattern Fragments client";
+              doap:description "The Triple Pattern Fragments client solves SPARQL queries by requesting triple patterns of a dataset."@en;
+              doap:homepage <http://linkeddatafragments.org/>;
+              foaf:page <http://linkeddatafragments.org/>;
+              doap:repository <https://github.com/LinkedDataFragments/Client>;
+              doap:download-page <https://github.com/LinkedDataFragments/Client/releases>;
+              doap:programming-language "JavaScript";
+              doap:maintainer <http://ruben.verborgh.org/#me>;
+              project:relatedProject <#ldf>, <#ldf-server>.
+
+<#ldf-server> a doap:Project;
+              rdfs:label "Triple Pattern Fragments server";
+              doap:name  "Triple Pattern Fragments server";
+              doap:description "The Triple Pattern Fragments server publishes all triple patterns of given datasets."@en;
+              doap:homepage <http://linkeddatafragments.org/>;
+              foaf:page <http://linkeddatafragments.org/>;
+              doap:repository <https://github.com/LinkedDataFragments/Server>;
+              doap:download-page <https://github.com/LinkedDataFragments/Server/releases>;
+              doap:programming-language "JavaScript";
+              doap:maintainer <http://ruben.verborgh.org/#me>;
+              project:relatedProject <#ldf>, <#ldf-client>.
+
+<http://ruben.verborgh.org/#me> a foaf:Person;
+                                rdfs:label "Ruben Verborgh";
+                                foaf:homepage <http://ruben.verborgh.org/>;
+                                foaf:isPrimaryTopicOf <http://ruben.verborgh.org/profile/>.

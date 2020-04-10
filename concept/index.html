@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Linked Data Fragments | Concept</title>
+  <link rel="stylesheet" href="/styles/main.css">
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400italic,700italic,400,700' rel='stylesheet'>
+  <meta name="viewport" content="initial-scale=1">
+</head>
+<body class="concept">
+  <nav>
+    <p><a href="/">Linked Data Fragments</a></p><ul>
+      <li class="active"><a href="/concept/">Concept</a></li><li><a href="/data/">Data</a></li><li><a href="/software/">Software</a></li><li><a href="/in-depth/">In depth</a></li><li><a href="/specification/">Specification</a></li><li><a href="/publications/">Publications</a></li>
+        <li class="new"><a href="http://comunica.linkeddatafragments.org/" target="_blank">Comunica</a></li>
+    </ul>
+  </nav>
+  <main>
+    
+      <h1>Concept</h1>
+    
+    
+    
+    <h2 id="linked-data-fragments-auniform-view-on-all-linked-data-interfaces">Linked Data Fragments: a uniform view on all Linked Data interfaces</h2>
+<p>Today’s Web offers three common ways to access Linked Data:</p>
+
+<ul>
+  <li>A <strong>data dump</strong> contains all triples in an entire dataset
+<em>(<a href="http://downloads.dbpedia.org/3.9/en/" target="_blank">example</a>)</em>.</li>
+  <li>A <strong>subject page</strong> contains triples about a specific subject in a dataset
+<em>(<a href="http://dbpedia.org/page/Linked_data" target="_blank">example</a>)</em>.</li>
+  <li>A <strong>SPARQL result</strong> contains triples that correspond to a <a href="http://www.w3.org/TR/sparql11-query/#construct" target="_blank">SPARQL CONSTRUCT</a> query
+<em>(<a href="http://dbpedia.org/sparql?query=PREFIX+dbpedia-owl%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0A%0D%0ACONSTRUCT+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D%0D%0AWHERE+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D&amp;format=text%2Fturtle" target="_blank">example</a>)</em>.</li>
+</ul>
+
+<p>Linked Data Fragments is a conceptual framework that provides a uniform view on all possible interfaces to RDF,
+by observing that each interface partitions a dataset into its own specific kind of <em>fragments</em>.
+<br />
+A <a href="/in-depth/#ldf"><strong>Linked Data Fragment</strong></a> (LDF) is characterized
+by a specific <strong>selector</strong> <em>(subject URI, SPARQL query, …)</em>,
+<strong>metadata</strong> <em>(variable names, counts, …)</em>,
+and <strong>controls</strong> <em>(links or URIs to other fragments)</em>.</p>
+
+<p>While the above options are the most common ways to offer datasets,
+we could think of many others.
+<br />
+Our goal is to explore those other ways,
+in order to optimize the balance between server and client effort.</p>
+
+<h2 id="the-axis-of-linked-data-fragments-types">The axis of Linked Data Fragments types</h2>
+<p>The Linked Data Fragments vision
+allows us to visualize different HTTP interfaces for Linked Data <em>together</em>.</p>
+
+<svg height="115" class="alternate">
+  <marker id="rightArrow" markerWidth="10" markerHeight="10" refx="10" refy="5">
+    <polyline points="0,0 10,5 0,10" fill="none" stroke="black" />
+  </marker>
+  <marker id="leftArrow" markerWidth="10" markerHeight="10" refx="0" refy="5">
+    <polyline points="10,0 0,5 10,10" fill="none" stroke="black" />
+  </marker>
+
+  <line x1="0" y1="74" x2="100%" y2="74" style="marker-start: url(#leftArrow); marker-end: url(#rightArrow);" />
+
+  <text x="0.5%" y="25" class="caption left">high client cost</text>
+  <text x="0.5%" y="42" class="caption left">high availability</text>
+  <text x="0.5%" y="59" class="caption left">high bandwidth</text>
+
+  <text x="99.5%" y="25" class="caption right">high server cost</text>
+  <text x="99.5%" y="42" class="caption right">low availability</text>
+  <text x="99.5%" y="59" class="caption right">low bandwidth</text>
+
+  <line x1="5%" x2="5%" y1="69" y2="80" />
+  <line x1="20%" x2="20%" y1="69" y2="80" />
+  <line x1="43%" x2="43%" y1="69" y2="80" />
+  <line x1="95%" x2="95%" y1="69" y2="80" />
+  <text x="2%" y="95" class="label left">data dump</text>
+  <text x="22%" y="95" class="label">subject page</text>
+  <text x="43%" y="95" class="label"><a xlink:href="#tpf">Triple Pattern Fragment</a></text>
+  <text x="98%" y="95" class="label right">SPARQL query result</text>
+</svg>
+
+<p><strong>SPARQL endpoints</strong> are easy for clients,
+as they allow highly specific fragment selection.
+However, they also have the highest server cost
+which makes it expensive to host them with <a href="http://sw.deri.org/~aidanh/docs/epmonitorISWC.pdf" target="_blank">decent availability</a>.
+If you don’t want to depend on such an endpoint,
+you download a <strong>data dump</strong>,
+but then you’re querying a local source instead of the Web.
+With <strong>subject pages</strong>, servers do minimal effort,
+but clients need to <a href="http://squin.sourceforge.net/" target="_blank">work hard</a> to solve simple queries.</p>
+
+<p>Can we <strong>minimize server resource usage</strong>
+while still enabling clients to <strong>query data sources efficiently</strong>?
+<br />
+Such solutions can be found along the above axis
+by defining new Linked Data Fragment types.</p>
+
+<h2 id="tpf">New fragment types enable high-availability querying at low cost</h2>
+<p>We develop fragment types that require minimal server effort
+and enable efficient client-side querying.
+One such type is called a <strong>Triple Pattern Fragment</strong>
+(or <strong><em>basic</em> Linked Data Fragment</strong>).
+It consists of:</p>
+
+<ul>
+  <li><strong>data</strong> that corresponds to a triple pattern
+<em>(<a href="http://data.linkeddatafragments.org/dbpedia?subject=&amp;predicate=rdf%3Atype&amp;object=dbpedia-owl%3ARestaurant" target="_blank">example</a>)</em>.</li>
+  <li><strong>metadata</strong> that consists of the (approximate) total triple count
+<em>(<a href="http://data.linkeddatafragments.org/dbpedia?subject=&amp;predicate=rdf%3Atype&amp;object=" target="_blank">example</a>)</em>.</li>
+  <li><strong>controls</strong> that lead to all other fragments of the same dataset
+<em>(<a href="http://data.linkeddatafragments.org/dbpedia?subject=&amp;predicate=&amp;object=%22John%22%40en" target="_blank">example</a>)</em>.</li>
+</ul>
+
+<p>Servers that offer such fragments are called
+<a href="/software/#server"><strong><em>Triple Pattern Fragments</em> servers</strong></a>.
+<br />
+<a href="/software/#client"><strong><em>Triple Pattern Fragments</em> clients</strong></a>
+can solve many SPARQL queries efficiently.</p>
+
+  </main>
+  <footer>
+    <p>
+      ©2013–2020
+      the Linked Data Fragments collaborators.
+      <strong><a href="mailto:ruben.verborgh@ugent.be?subject=Linked%20Data%20Fragments">Contact us</a>.</strong>
+    </p>
+  </footer>
+  <script>GoogleAnalyticsObject='ga';ga=function(){ga.q.push(arguments)};ga.q=[['create','UA-48816744-1','linkeddatafragments.org'],['send','pageview']];ga.l=1*new Date</script>
+  <script src="//www.google-analytics.com/analytics.js"></script>
+</body>
+</html>

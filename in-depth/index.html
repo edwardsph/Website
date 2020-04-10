@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Linked Data Fragments | In depth</title>
+  <link rel="stylesheet" href="/styles/main.css">
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400italic,700italic,400,700' rel='stylesheet'>
+  <meta name="viewport" content="initial-scale=1">
+</head>
+<body class="indepth">
+  <nav>
+    <p><a href="/">Linked Data Fragments</a></p><ul>
+      <li><a href="/concept/">Concept</a></li><li><a href="/data/">Data</a></li><li><a href="/software/">Software</a></li><li class="active"><a href="/in-depth/">In depth</a></li><li><a href="/specification/">Specification</a></li><li><a href="/publications/">Publications</a></li>
+        <li class="new"><a href="http://comunica.linkeddatafragments.org/" target="_blank">Comunica</a></li>
+    </ul>
+  </nav>
+  <main>
+    
+      <h1>In depth</h1>
+    
+    
+    
+      <h2>Overview</h2>
+      <ul class="overview">
+      
+        <li><a href="#video">What is Linked Data Fragments all about?</a></li>
+      
+        <li><a href="#ldf">What is a Linked Data Fragment?</a></li>
+      
+        <li><a href="#tpf">What is a Triple Pattern Fragment?</a></li>
+      
+        <li><a href="#purpose">What is the purpose of Linked Data Fragments?</a></li>
+      
+        <li><a href="#ldf-server">What is a Linked Data Fragments server?</a></li>
+      
+        <li><a href="#tpf-server">What is a Triple Pattern Fragments server?</a></li>
+      
+        <li><a href="#tpf-client">What is a Triple Pattern Fragments client?</a></li>
+      
+        <li><a href="#sparql">How do Triple Pattern Fragments differ from SPARQL results?</a></li>
+      
+        <li><a href="#data-dumps">How do Triple Pattern Fragments differ from data dumps?</a></li>
+      
+        <li><a href="#ldp">How do Linked Data Fragments relate to Linked Data Platform?</a></li>
+      
+        <li><a href="#who">Who is working on Linked Data Fragments?</a></li>
+      
+      </ul>
+    
+    <h2 id="video">What is <em>Linked Data Fragments</em> all about?</h2>
+<p>We aim to find <strong>new ways of publishing Linked Data</strong>,
+in which the <strong>query workload is distributed</strong> between clients and servers.
+<a href="http://videolectures.net/iswc2014_verborgh_querying_datasets/" target="_blank">Watch this video</a>
+for a detailed overview of Linked Data Fragments.</p>
+
+<h2 id="ldf">What is a <em>Linked Data Fragment</em>?</h2>
+<p>A <strong>Linked Data Fragment</strong> (LDF) of a Linked Data dataset
+is a resource consisting of those triples of this dataset that match a specific <strong>selector</strong>,
+together with <strong>metadata</strong> and <strong>hypermedia controls</strong>.</p>
+
+<p>Examples of Linked Data Fragments include:</p>
+
+<ul>
+  <li>
+    <p><strong>data dumps</strong> <em>(<a href="http://downloads.dbpedia.org/3.9/en/" target="_blank">example</a>)</em>:
+their selector is the universal selector,
+their metadata set includes the file size,
+and their control set is empty.</p>
+  </li>
+  <li>
+    <p><strong>subject pages</strong> <em>(<a href="http://dbpedia.org/page/Linked_data" target="_blank">example</a>)</em>:
+their selector is a subject URI,
+their metadata set is often empty,
+and their control set is given by URIs that can be dereferenced.</p>
+  </li>
+  <li>
+    <p><strong>SPARQL results</strong> <em>(<a href="http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&amp;query=CONSTRUCT+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D%0D%0AWHERE+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D&amp;format=text%2Fturtle" target="_blank">example</a>)</em>:
+their selector is a CONSTRUCT query,
+their metadata set is empty,
+and their control set includes the endpoint URI,
+which allows to retrieve other SPARQL results.</p>
+  </li>
+</ul>
+
+<p>The <a href="http://www.hydra-cg.com/spec/latest/linked-data-fragments/" target="_blank">Linked Data Fragments specification</a>
+formally captures this concept.</p>
+
+<h2 id="tpf">What is a <em>Triple Pattern Fragment</em>?</h2>
+<p>A <strong>Triple Pattern Fragment</strong> is a Linked Data Fragment
+with a <strong>triple pattern</strong> as selector, <strong>count</strong> metadata,
+and controls to <strong>retrieve any other Triple Pattern Fragment</strong> of the same dataset,
+in particular other fragments the matching elements belong to.
+Fragments are <em>paged</em> to contain only a part of the data.</p>
+
+<p>Triple Pattern Fragments <em>(<a href="http://data.linkeddatafragments.org/dbpedia?subject=&amp;predicate=rdf%3Atype&amp;object=dbpedia-owl%3ARestaurant" target="_blank">example</a>)</em> minimize server processing,
+while enabling efficient querying by clients:</p>
+
+<ul>
+  <li>
+    <p><strong>Data dumps</strong> allow full querying on the client side,
+but all processing happens locally.
+Therefore, it is not <em>Web</em> querying:
+the data is likely outdated and only comes from a single source.</p>
+  </li>
+  <li>
+    <p><strong>Subject pages</strong> also require low server effort,
+but they do not allow efficient querying of all graph patterns.
+For instance, finding a list of <a href="http://dbpedia.org/ontology/Artist" target="_blank">artists</a>
+is near impossible with regular dereferencing or Linked Data querying.</p>
+  </li>
+  <li>
+    <p>Compared to <strong>SPARQL results</strong>, Triple Pattern Fragments are easier to generate
+because the server effort is bounded.
+In contrast, each SPARQL query can demand an unlimited amount of server resources.</p>
+  </li>
+</ul>
+
+<p>The <a href="http://www.hydra-cg.com/spec/latest/triple-pattern-fragments/" target="_blank">Triple Pattern Fragments specification</a>
+formally captures this concept.</p>
+
+<p>A <a href="/software/#client">Triple Pattern Fragments client</a>
+answers SPARQL queries using only Triple Pattern Fragments.</p>
+
+<h2 id="purpose">What is the purpose of <em>Linked Data Fragments</em>?</h2>
+<p>With Linked Data Fragments, we aim to discuss ways to publish Linked Data
+in addition to SPARQL endpoints, subject pages, and data dumps.
+In particular, we want to <strong>enable clients to query the Web of Data</strong>,
+which is impossible/unreliable today because of
+the <a href="http://sw.deri.org/~aidanh/docs/epmonitorISWC.pdf" target="_blank">low availability of public SPARQL endpoints</a>.</p>
+
+<p>New types of Linked Data Fragments,
+such as <a href="#tpf">Triple Pattern Fragments</a>,
+can vastly improve server availability
+while still enabling client-side querying.</p>
+
+<p>In short, the goal of Linked Data Fragments is
+to <strong>build servers that <em>enable</em> intelligent clients</strong>.</p>
+
+<h2 id="ldf-server">What is a <em>Linked Data Fragments</em> server?</h2>
+<p>A <strong>Linked Data Fragments server</strong> (LDF server) is an HTTP server
+that offers Linked Data Fragments covering one or more datasets
+in at least one triple-based representation.</p>
+
+<p>This means that SPARQL endpoints,
+Pubby servers, HTTP servers with RDFa, …
+are all LDF servers.</p>
+
+<h2 id="tpf-server">What is a <em>Triple Pattern Fragments</em> server?</h2>
+<p>A <strong>Triple Pattern Fragments server</strong> is a Linked Data Fragments server
+that offers at least the Triple Pattern Fragments of certain datasets.</p>
+
+<p>An example Triple Pattern Fragments server is available at
+<a href="http://data.linkeddatafragments.org/" target="_blank">data.linkeddatafragments.org</a>.
+<br />
+You can set up your own server
+with the open-source <a href="/software/">server software</a>.</p>
+
+<h2 id="tpf-client">What is a <em>Triple Pattern Fragments</em> client?</h2>
+<p>A <strong>Linked Data Fragments client</strong> (LDF client)
+consumes Triple Pattern Fragments in a certain way.</p>
+
+<p>A client such as your Web browser
+allows to browse <a href="http://data.linkeddatafragments.org/dbpedia?subject=&amp;predicate=rdf%3Atype&amp;object=dbpedia-owl%3ARestaurant" target="_blank">Triple Pattern Fragments</a>.
+More complex clients, such as <a href="/software/">Triple Pattern Fragments clients</a>,
+perform more complicated tasks like answering SPARQL queries.</p>
+
+<h2 id="sparql">How do <em>Triple Pattern Fragments</em> differ from SPARQL results?</h2>
+<p>First of all, results of SPARQL queries are Linked Data Fragments,
+because they represent a fragment of the underlying dataset.
+However, they are not <em>Triple Pattern Fragments</em>,
+because those have a single <em>triple pattern</em> as selector,
+and provide <em>count metadata</em> and <em>controls</em> towards other fragments.
+<br />
+Compare an <a href="http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&amp;query=CONSTRUCT+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D%0D%0AWHERE+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D&amp;format=text%2Fturtle" target="_blank">example SPARQL fragment</a>
+to an <a href="http://data.linkeddatafragments.org/dbpedia?subject=&amp;predicate=rdf%3Atype&amp;object=dbpedia-owl%3ARestaurant" target="_blank">example Triple Pattern Fragments</a>.</p>
+
+<p>Each individual SPARQL query can take a lot of processing time.
+In contrast, Triple Pattern Fragments are <strong>easy to generate</strong>.
+Furthermore, the number of Triple Pattern Fragments for each dataset is finite,
+so they can be <strong>precomputed and cached efficiently</strong>.</p>
+
+<p>With a SPARQL endpoint, different clients expect a single server
+to answer many different complex questions.
+With a Triple Pattern Fragments server,
+different clients only ask for <strong>reusable, simple answers</strong>
+and perform query-specific tasks themselves.
+Moving processing from server to client leads to higher scalability.</p>
+
+<p>Linked Data Fragments allows you to publish your dataset in a <em>queryable way</em>
+without having to worry about server stability and availability issues.</p>
+
+<h2 id="data-dumps">How do <em>Triple Pattern Fragments</em> differ from data dumps?</h2>
+<p>Another way to avoid depending on public SPARQL endpoints
+is to download a data dump and host a SPARQL server locally.
+This would give you a strong performance advantage over public endpoints.
+<br />
+However, this is <strong>not Web querying</strong>.
+The data is <em>not up to date</em>,
+and only specific datasets are available.</p>
+
+<p>Triple Pattern Fragments servers aim to
+bring the availability rates of private endpoints to the public Web
+by moving intensive processing to the client side.</p>
+
+<h2 id="ldp">How do <em>Linked Data Fragments</em> relate to Linked Data Platform?</h2>
+<p>“<a href="http://www.w3.org/TR/ldp/" target="_blank">Linked Data Platform</a>” is a W3C Working Draft
+that describes a <em>read-write</em> Linked Data architecture.
+“Linked Data Fragments” is a generic term
+for fragments of a Linked Data datasets.
+<br />
+More specifically, with Linked Data Fragments,
+we aim to investigate scalable ways to publish Linked Data
+that <strong>enable clients to efficiently perform complex operations</strong> such as querying.</p>
+
+<p>A crucial difference between <em>Triple Pattern Fragments</em> and Linked Data Platform
+is that the latter proposes <a href="http://lists.w3.org/Archives/Public/public-ldp/2012Nov/0029.html" target="_blank">one specific service</a>;
+that is, a <a href="http://www.w3.org/TR/ldp/#ldpr-resource" target="_blank">detailed set of rules</a>
+that have to be followed.
+<br />
+In contrast, we envision various Linked Data Servers with different APIs
+to be used in more flexible ways.</p>
+
+<p>Most importantly, Linked Data Fragments and Linked Data Platform are <strong>orthogonal</strong>;
+a server can offer Triple Pattern Fragments,
+while also implementing the Linked Data Platform read-write interface.</p>
+
+<h2 id="who">Who is working on <em>Linked Data Fragments</em>?</h2>
+<p>The following people have <a href="/publications/">published</a> work on Linked Data Fragments:
+<em>Ruben Verborgh, Erik Mannens, Miel Vander Sande, Pieter Colpaert, Rik Van de Walle, Ruben Taelman, Joachim Van Herwegen, Laurens De Vocht, Olaf Hartig, Ben De Meester, Gerald Haesendonck, Richard Cyganiak, Patrick Hochstenbach, Herbert Van de Sompel, Maribel Acosta, Luda Balakireva, Sander Ballieu, Wouter Beek, Carlos Buil-Aranda, Sam Coppens, Oscar Corcho, Emmanuel Desmontils, Anastasia Dimou, Pauline Folz, Ian Letter, Alejandro Llaves, Pascal Molli, Benjamin Moreau, Jorge Pérez, Laurens Rietveld, Stefan Schlobach, Patricia Serrano-Alvarado, Harihar Shankar, Hala Skaf-Molli, David Thoumas, Maria-Esther Vidal</em>.</p>
+
+  </main>
+  <footer>
+    <p>
+      ©2013–2020
+      the Linked Data Fragments collaborators.
+      <strong><a href="mailto:ruben.verborgh@ugent.be?subject=Linked%20Data%20Fragments">Contact us</a>.</strong>
+    </p>
+  </footer>
+  <script>GoogleAnalyticsObject='ga';ga=function(){ga.q.push(arguments)};ga.q=[['create','UA-48816744-1','linkeddatafragments.org'],['send','pageview']];ga.l=1*new Date</script>
+  <script src="//www.google-analytics.com/analytics.js"></script>
+</body>
+</html>

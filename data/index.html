@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Linked Data Fragments | Data</title>
+  <link rel="stylesheet" href="/styles/main.css">
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400italic,700italic,400,700' rel='stylesheet'>
+  <meta name="viewport" content="initial-scale=1">
+</head>
+<body class="data">
+  <nav>
+    <p><a href="/">Linked Data Fragments</a></p><ul>
+      <li><a href="/concept/">Concept</a></li><li class="active"><a href="/data/">Data</a></li><li><a href="/software/">Software</a></li><li><a href="/in-depth/">In depth</a></li><li><a href="/specification/">Specification</a></li><li><a href="/publications/">Publications</a></li>
+        <li class="new"><a href="http://comunica.linkeddatafragments.org/" target="_blank">Comunica</a></li>
+    </ul>
+  </nav>
+  <main>
+    
+      <h1>Data</h1>
+    
+    
+    
+    <h2 id="access-datasets-as-triple-pattern-fragments">Access datasets as Triple Pattern Fragments</h2>
+<p><a href="/concept/#tpf">Triple Pattern Fragments</a>
+provide triple-pattern-based access to a dataset.
+This enables <strong>client-side querying</strong> of live data with <strong>high availability</strong> at <strong>low cost</strong>.
+You can access the datasets below as Triple Pattern Fragments,
+and even perform <a href="http://client.linkeddatafragments.org/#datasources=http%3A%2F%2Ffragments.dbpedia.org%2F2014%2Fen;http%3A%2F%2Fdata.linkeddatafragments.org%2Fviaf;http%3A%2F%2Fdata.linkeddatafragments.org%2Fharvard&amp;query=SELECT%20%3Fperson%20%3Fname%20%3Fbook%20%3Ftitle%20%7B%0A%20%20%20%20%3Fperson%20dc%3Asubject%20dbpedia%3ACategory%3ASwedish_Nobel_laureates.%0A%20%20%20%20%3FviafID%20schema%3AsameAs%20%3Fperson%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20schema%3Aname%20%3Fname.%0A%20%20%20%20%3Fbook%20dc%3Acontributor%20%5B%20foaf%3Aname%20%3Fname%20%5D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20dc%3Atitle%20%3Ftitle.%0A%7D" target="_blank">federated querying</a> over them.</p>
+
+<h3 id="triple-pattern-fragments-hosted-by-dbpediahttpfragmentsdbpediaorg">Triple Pattern Fragments hosted by <a href="http://fragments.dbpedia.org/" target="_blank">DBpedia</a></h3>
+<ul>
+  <li><strong><a href="http://fragments.dbpedia.org/2014/en" target="_blank">DBpedia</a></strong>, the Linked Data version of Wikipedia
+<em>(<a href="http://fragments.dbpedia.org/" target="_blank">query these fragments</a>)</em></li>
+</ul>
+
+<h3 id="triple-pattern-fragments-hosted-by-wikidatahttpswwwwikidataorg">Triple Pattern Fragments hosted by <a href="https://www.wikidata.org/" target="_blank">Wikidata</a></h3>
+<ul>
+  <li><strong><a href="https://query.wikidata.org/bigdata/ldf" target="_blank">Wikidata</a></strong>, the free knowledge base
+<em>(<a href="http://ldfclient.wmflabs.org/" target="_blank">query these fragments</a>)</em></li>
+</ul>
+
+<h3 id="triple-pattern-fragments-hosted-by-lod-laundromathttplodlaundromatorgwardrobe">Triple Pattern Fragments hosted by <a href="http://lodlaundromat.org/wardrobe/" target="_blank">LOD Laundromat</a></h3>
+<ul>
+  <li><strong><a href="http://lodlaundromat.org/wardrobe/" target="_blank">Dataset index</a></strong>,
+more than 650,000 datasets from across the Web.</li>
+</ul>
+
+<h3 id="triple-pattern-fragments-hosted-for-datasalonhttpwwwdatasaloncom">Triple Pattern Fragments hosted for <a href="http://www.datasalon.com/" target="_blank">DataSalon</a></h3>
+<ul>
+  <li><strong><a href="http://ldf-vivo.herokuapp.com/orgref" target="_blank">OrgRef</a></strong>,
+data about organizations (universities, colleges, schools, hospitals)</li>
+</ul>
+
+<h3 id="triple-pattern-fragments-hosted-by-the-ewi-projecthttpewimmlabbe">Triple Pattern Fragments hosted by the <a href="http://ewi.mmlab.be/" target="_blank">EWI project</a></h3>
+
+<ul>
+  <li><strong><a href="http://ewi.mmlab.be/cd/all" target="_blank">Contact details of cities in Flanders</a></strong>
+<em>(<a href="http://ewi.mmlab.be/query/#startFragment=http%3A%2F%2Fewi.mmlab.be%2Fcd%2Fall" target="_blank">query these fragments</a>)</em></li>
+  <li><strong><a href="http://ewi.mmlab.be/ba/all" target="_blank">Flemish company register</a></strong>
+<em>(<a href="http://ewi.mmlab.be/query/#startFragment=http%3A%2F%2Fewi.mmlab.be%2Fba%2Fall" target="_blank">query these fragments</a>)</em></li>
+</ul>
+
+<h3 id="triple-pattern-fragments-hosted-by-between-our-worldshttpsbetweenourworldsorg">Triple Pattern Fragments hosted by <a href="https://betweenourworlds.org/" target="_blank">Between Our Worlds</a></h3>
+<ul>
+  <li><strong><a href="https://data.betweenourworlds.org" target="_blank">The Between Our Worlds dataset</a></strong> provides Linked Open Data about anime series and movies.</li>
+</ul>
+
+<h3 id="triple-pattern-fragments-hosted-by-us-at-datalinkeddatafragmentsorghttpdatalinkeddatafragmentsorg">Triple Pattern Fragments hosted by us at <a href="http://data.linkeddatafragments.org/" target="_blank">data.linkeddatafragments.org</a></h3>
+
+<ul>
+  <li><strong><a href="http://data.linkeddatafragments.org/dbpedia" target="_blank">DBpedia</a></strong>, the Linked Data version of Wikipedia
+<em>(<a href="http://client.linkeddatafragments.org/" target="_blank">query these fragments</a>)</em></li>
+  <li><strong><a href="http://data.linkeddatafragments.org/geonames" target="_blank">GeoNames</a></strong>, a dataset of countries and over 8 million placenames</li>
+  <li><strong><a href="http://data.linkeddatafragments.org/linkedgeodata" target="_blank">LinkedGeoData</a></strong>, OpenStreetMap as Linked Data</li>
+  <li><strong><a href="http://data.linkeddatafragments.org/wiktionary" target="_blank">Wiktionary</a></strong>, a dictionary of the English language</li>
+  <li><strong><a href="http://data.linkeddatafragments.org/dblp" target="_blank">DBLP</a></strong>, the Computer Science Bibliography</li>
+  <li><strong><a href="http://data.linkeddatafragments.org/yago2s" target="_blank">YAGO2s</a></strong>, a huge semantic knowledge base</li>
+  <li><strong><a href="http://data.linkeddatafragments.org/eventmedia?object=http%3A%2F%2Flinkedevents.org%2Fontology%2FEvent" target="_blank">EventMedia</a></strong>, an events data source from EURECOM</li>
+  <li><strong><a href="http://data.linkeddatafragments.org/ookaboo" target="_blank">Ookaboo</a></strong>, public domain and Creative Commons images, linked to DBpedia</li>
+  <li>…</li>
+  <li><strong>Your dataset?</strong> <a href="mailto:ruben.verborgh@ugent.be?subject=Host%20my%20dataset">Contact us</a> and we will add it for you!</li>
+</ul>
+
+<h2 id="query-public-datasets-using-triple-pattern-fragments">Query public datasets using Triple Pattern Fragments</h2>
+
+<p>You can execute SPARQL queries over these datasets with a <a href="/software/">Triple Pattern Fragments client</a>.</p>
+
+<p>Clients are available as <em>standalone applications</em>, <em>libraries</em>, and as <em>Web applications</em>.
+<br />
+<a href="http://client.linkeddatafragments.org/" target="_blank">Try the online Triple Pattern Fragments client</a>
+and execute your own queries!</p>
+
+<h2 id="publish-your-own-triple-pattern-fragments">Publish your own Triple Pattern Fragments</h2>
+<p><strong>You can host your dataset</strong> in a queryable way at low cost and with high availability
+using <a href="/software/#server">a free server</a>.
+<br />
+Deploy your own server easily on top of an existing dataset.
+<a href="/software/#server">Download your server.</a></p>
+
+<p><strong>Do you already publish Triple Pattern Fragments?</strong>
+<br />
+<a href="mailto:ruben.verborgh@ugent.be?subject=I%20publish%20Linked%20Data%20Fragments">Let us know</a>, we’ll add you to the list on this page!</p>
+
+<p><strong>Do you want us to publish your dataset?</strong>
+<br />
+Even though Triple Pattern Fragments only requires a light server,
+we can <a href="mailto:ruben.verborgh@ugent.be?subject=Host%20my%20dataset">host your dataset for you</a>.</p>
+
+  </main>
+  <footer>
+    <p>
+      ©2013–2020
+      the Linked Data Fragments collaborators.
+      <strong><a href="mailto:ruben.verborgh@ugent.be?subject=Linked%20Data%20Fragments">Contact us</a>.</strong>
+    </p>
+  </footer>
+  <script>GoogleAnalyticsObject='ga';ga=function(){ga.q.push(arguments)};ga.q=[['create','UA-48816744-1','linkeddatafragments.org'],['send','pageview']];ga.l=1*new Date</script>
+  <script src="//www.google-analytics.com/analytics.js"></script>
+</body>
+</html>
