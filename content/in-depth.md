@@ -27,7 +27,7 @@ Examples of Linked Data Fragments include:
   their metadata set is often empty,
   and their control set is given by URIs that can be dereferenced.
 
-- **SPARQL results** _([example](http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=CONSTRUCT+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D%0D%0AWHERE+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D&format=text%2Fturtle))_:
+- **SPARQL results** _([example](http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=CONSTRUCT+%7B+%3Fp+a+dbo%3AArtist+%7D%0D%0AWHERE+%7B+%3Fp+a+dbo%3AArtist+%7D&format=text%2Fturtle))_:
   their selector is a CONSTRUCT query,
   their metadata set is empty,
   and their control set includes the endpoint URI,
@@ -116,7 +116,7 @@ However, they are not _Triple Pattern Fragments_,
 because those have a single _triple pattern_ as selector,
 and provide _count metadata_ and _controls_ towards other fragments.
 <br>
-Compare an [example SPARQL fragment](http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=CONSTRUCT+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D%0D%0AWHERE+%7B+%3Fp+a+dbpedia-owl%3AArtist+%7D&format=text%2Fturtle)
+Compare an [example SPARQL fragment](http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=CONSTRUCT+%7B+%3Fp+a+dbo%3AArtist+%7D%0D%0AWHERE+%7B+%3Fp+a+dbo%3AArtist+%7D&format=text%2Fturtle)
 to an [example Triple Pattern Fragments](http://data.linkeddatafragments.org/dbpedia?subject=&predicate=rdf%3Atype&object=dbpedia-owl%3ARestaurant).
 
 Each individual SPARQL query can take a lot of processing time.
