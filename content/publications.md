@@ -28,6 +28,7 @@ the Triple Pattern Fragments interface.
   <%= render_publication 'taelman_cold_2016' %>
   <%= render_publication 'colpaert_iswc_2015' %>
   <%= render_publication 'colpaert_cold_2016' %>
+  <%= render_publication 'taelman_ssws_amf_2020' %>
 </ul>
 
 ## Query algorithm optimizations
