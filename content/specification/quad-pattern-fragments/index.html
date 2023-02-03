@@ -368,16 +368,16 @@ PREFIX sd:    &lt;http://www.w3.org/ns/sparql-service-description#&gt;
 <pre><code>&lt;http://example.org/example#controls&gt;
       {
         &lt;http://example.org/example#dataset&gt;
-        void:subset &lt;http://example.org/example?s=http%3A%2F%2Fexample.org%2Ftopic&gt;;
-        &lt;http://example.org/example#controls&gt;
-        foaf:primaryTopic &lt;http://example.org/example#dataset&gt;;
-        hydra:search [
-            hydra:template "http://example.org/example{?s,p,o,g}";
-            hydra:mapping  [ hydra:variable "s"; hydra:property rdf:subject ],
-                           [ hydra:variable "p"; hydra:property rdf:predicate ],
-                           [ hydra:variable "o"; hydra:property rdf:object ],
-                           [ hydra:variable "g"; hydra:property sd:graph ]
-        ].
+            void:subset &lt;http://example.org/example?s=http%3A%2F%2Fexample.org%2Ftopic&gt;;       
+            hydra:search [
+                hydra:template "http://example.org/example{?s,p,o,g}";
+                hydra:mapping  [ hydra:variable "s"; hydra:property rdf:subject ],
+                               [ hydra:variable "p"; hydra:property rdf:predicate ],
+                               [ hydra:variable "o"; hydra:property rdf:object ],
+                               [ hydra:variable "g"; hydra:property sd:graph ]
+            ].
+	&lt;http://example.org/example#controls&gt;
+            foaf:primaryTopic &lt;http://example.org/example#dataset&gt;.
       }</code></pre>
       <p>
         The above snippet assumes the dataset IRI is
